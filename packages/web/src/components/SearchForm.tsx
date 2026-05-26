@@ -93,9 +93,16 @@ export default function SearchForm({ onSearch, loading, overrides, autoSubmit }:
 
   useEffect(() => {
     if (overrides) {
-      setForm((prev) => ({ ...prev, ...overrides }));
+      setForm((prev) => {
+        const updated = { ...prev, ...overrides };
+        if (autoSubmit && !didAutoSubmit.current && updated.origin && updated.destination) {
+          didAutoSubmit.current = true;
+          setTimeout(() => onSearch(updated), 0);
+        }
+        return updated;
+      });
     }
-  }, [overrides]);
+  }, [overrides, autoSubmit, onSearch]);
 
   const update = (field: keyof SearchFormData, value: string | number | boolean) =>
     setForm((prev) => ({ ...prev, [field]: value }));
