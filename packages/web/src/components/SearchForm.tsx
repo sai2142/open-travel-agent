@@ -65,6 +65,13 @@ function getNextWeek(): string {
   return d.toISOString().split('T')[0];
 }
 
+function defaultLegs(): MultiCityLeg[] {
+  return [
+    { origin: '', destination: '', date: getTomorrow() },
+    { origin: '', destination: '', date: getNextWeek() },
+  ];
+}
+
 export default function SearchForm({ onSearch, loading, overrides }: Props) {
   const [form, setForm] = useState<SearchFormData>({
     origin: '',
@@ -79,6 +86,7 @@ export default function SearchForm({ onSearch, loading, overrides }: Props) {
     weekendMonth: getNextMonth(),
     tripLengthMin: 3,
     tripLengthMax: 5,
+    multiCityLegs: defaultLegs(),
   });
 
   useEffect(() => {
