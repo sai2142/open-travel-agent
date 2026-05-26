@@ -2058,15 +2058,15 @@ function ResultFilters({ results, filters, onChange, resultCount }) {
                 columnNumber: 7
             }, this),
             expanded && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "glass p-4 space-y-4 fade-in",
+                className: "glass p-5 space-y-5 fade-in",
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "grid grid-cols-2 md:grid-cols-4 gap-4",
+                        className: "grid grid-cols-2 md:grid-cols-4 gap-x-6 gap-y-5",
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
-                                        className: "block text-[10px] text-[var(--color-text-muted)] uppercase tracking-widest mb-2",
+                                        className: "block text-[10px] text-[var(--color-text-muted)] uppercase tracking-widest mb-2.5",
                                         children: "Max Stops"
                                     }, void 0, false, {
                                         fileName: "[project]/packages/web/src/components/ResultFilters.tsx",
@@ -2117,73 +2117,64 @@ function ResultFilters({ results, filters, onChange, resultCount }) {
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
-                                        className: "block text-[10px] text-[var(--color-text-muted)] uppercase tracking-widest mb-2",
+                                        className: "block text-[10px] text-[var(--color-text-muted)] uppercase tracking-widest mb-2.5",
                                         children: "Max Price"
                                     }, void 0, false, {
                                         fileName: "[project]/packages/web/src/components/ResultFilters.tsx",
                                         lineNumber: 227,
                                         columnNumber: 15
                                     }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
+                                        type: "range",
+                                        min: priceRange.min,
+                                        max: priceRange.max,
+                                        step: 10,
+                                        value: filters.maxPrice ?? priceRange.max,
+                                        onChange: (e)=>{
+                                            const val = Number(e.target.value);
+                                            update({
+                                                maxPrice: val >= priceRange.max ? null : val
+                                            });
+                                        },
+                                        className: "w-full accent-indigo-500 mb-2"
+                                    }, void 0, false, {
+                                        fileName: "[project]/packages/web/src/components/ResultFilters.tsx",
+                                        lineNumber: 230,
+                                        columnNumber: 15
+                                    }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        className: "flex items-center gap-2",
+                                        className: "relative",
                                         children: [
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
-                                                type: "range",
-                                                min: priceRange.min,
-                                                max: priceRange.max,
-                                                step: 10,
-                                                value: filters.maxPrice ?? priceRange.max,
-                                                onChange: (e)=>{
-                                                    const val = Number(e.target.value);
-                                                    update({
-                                                        maxPrice: val >= priceRange.max ? null : val
-                                                    });
-                                                },
-                                                className: "flex-1 accent-indigo-500"
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                className: "absolute left-2.5 top-1/2 -translate-y-1/2 text-[11px] text-[var(--color-text-muted)]",
+                                                children: "$"
                                             }, void 0, false, {
                                                 fileName: "[project]/packages/web/src/components/ResultFilters.tsx",
-                                                lineNumber: 231,
+                                                lineNumber: 243,
                                                 columnNumber: 17
                                             }, this),
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                className: "relative w-20 shrink-0",
-                                                children: [
-                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                        className: "absolute left-2 top-1/2 -translate-y-1/2 text-[11px] text-[var(--color-text-muted)]",
-                                                        children: "$"
-                                                    }, void 0, false, {
-                                                        fileName: "[project]/packages/web/src/components/ResultFilters.tsx",
-                                                        lineNumber: 244,
-                                                        columnNumber: 19
-                                                    }, this),
-                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
-                                                        type: "number",
-                                                        min: 0,
-                                                        max: 100000,
-                                                        placeholder: "Any",
-                                                        value: filters.maxPrice ?? '',
-                                                        onChange: (e)=>{
-                                                            const val = e.target.value ? Number(e.target.value) : null;
-                                                            update({
-                                                                maxPrice: val
-                                                            });
-                                                        },
-                                                        className: "input-field text-xs pl-5 py-1.5 !rounded-lg"
-                                                    }, void 0, false, {
-                                                        fileName: "[project]/packages/web/src/components/ResultFilters.tsx",
-                                                        lineNumber: 245,
-                                                        columnNumber: 19
-                                                    }, this)
-                                                ]
-                                            }, void 0, true, {
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
+                                                type: "number",
+                                                min: 0,
+                                                max: 100000,
+                                                placeholder: "Any",
+                                                value: filters.maxPrice ?? '',
+                                                onChange: (e)=>{
+                                                    const val = e.target.value ? Number(e.target.value) : null;
+                                                    update({
+                                                        maxPrice: val
+                                                    });
+                                                },
+                                                className: "input-field text-xs pl-6 py-1.5 !rounded-lg w-full"
+                                            }, void 0, false, {
                                                 fileName: "[project]/packages/web/src/components/ResultFilters.tsx",
-                                                lineNumber: 243,
+                                                lineNumber: 244,
                                                 columnNumber: 17
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/packages/web/src/components/ResultFilters.tsx",
-                                        lineNumber: 230,
+                                        lineNumber: 242,
                                         columnNumber: 15
                                     }, this)
                                 ]
@@ -2195,89 +2186,80 @@ function ResultFilters({ results, filters, onChange, resultCount }) {
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
-                                        className: "block text-[10px] text-[var(--color-text-muted)] uppercase tracking-widest mb-2",
+                                        className: "block text-[10px] text-[var(--color-text-muted)] uppercase tracking-widest mb-2.5",
                                         children: "Max Duration"
                                     }, void 0, false, {
                                         fileName: "[project]/packages/web/src/components/ResultFilters.tsx",
-                                        lineNumber: 263,
+                                        lineNumber: 261,
+                                        columnNumber: 15
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
+                                        type: "range",
+                                        min: 2,
+                                        max: 24,
+                                        step: 1,
+                                        value: filters.maxDuration ?? 24,
+                                        onChange: (e)=>{
+                                            const val = Number(e.target.value);
+                                            update({
+                                                maxDuration: val >= 24 ? null : val
+                                            });
+                                        },
+                                        className: "w-full accent-indigo-500 mb-2"
+                                    }, void 0, false, {
+                                        fileName: "[project]/packages/web/src/components/ResultFilters.tsx",
+                                        lineNumber: 264,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        className: "flex items-center gap-2",
+                                        className: "relative",
                                         children: [
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
-                                                type: "range",
-                                                min: 2,
+                                                type: "number",
+                                                min: 1,
                                                 max: 24,
-                                                step: 1,
-                                                value: filters.maxDuration ?? 24,
+                                                placeholder: "Any",
+                                                value: filters.maxDuration ?? '',
                                                 onChange: (e)=>{
-                                                    const val = Number(e.target.value);
+                                                    const val = e.target.value ? Number(e.target.value) : null;
                                                     update({
-                                                        maxDuration: val >= 24 ? null : val
+                                                        maxDuration: val
                                                     });
                                                 },
-                                                className: "flex-1 accent-indigo-500"
+                                                className: "input-field text-xs py-1.5 pr-8 !rounded-lg w-full"
                                             }, void 0, false, {
                                                 fileName: "[project]/packages/web/src/components/ResultFilters.tsx",
-                                                lineNumber: 267,
+                                                lineNumber: 277,
                                                 columnNumber: 17
                                             }, this),
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                className: "relative w-20 shrink-0",
-                                                children: [
-                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
-                                                        type: "number",
-                                                        min: 1,
-                                                        max: 24,
-                                                        placeholder: "Any",
-                                                        value: filters.maxDuration ?? '',
-                                                        onChange: (e)=>{
-                                                            const val = e.target.value ? Number(e.target.value) : null;
-                                                            update({
-                                                                maxDuration: val
-                                                            });
-                                                        },
-                                                        className: "input-field text-xs py-1.5 !rounded-lg"
-                                                    }, void 0, false, {
-                                                        fileName: "[project]/packages/web/src/components/ResultFilters.tsx",
-                                                        lineNumber: 280,
-                                                        columnNumber: 19
-                                                    }, this),
-                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                        className: "absolute right-2 top-1/2 -translate-y-1/2 text-[11px] text-[var(--color-text-muted)]",
-                                                        children: "hr"
-                                                    }, void 0, false, {
-                                                        fileName: "[project]/packages/web/src/components/ResultFilters.tsx",
-                                                        lineNumber: 292,
-                                                        columnNumber: 19
-                                                    }, this)
-                                                ]
-                                            }, void 0, true, {
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                className: "absolute right-2.5 top-1/2 -translate-y-1/2 text-[11px] text-[var(--color-text-muted)]",
+                                                children: "hr"
+                                            }, void 0, false, {
                                                 fileName: "[project]/packages/web/src/components/ResultFilters.tsx",
-                                                lineNumber: 279,
+                                                lineNumber: 289,
                                                 columnNumber: 17
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/packages/web/src/components/ResultFilters.tsx",
-                                        lineNumber: 266,
+                                        lineNumber: 276,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/packages/web/src/components/ResultFilters.tsx",
-                                lineNumber: 262,
+                                lineNumber: 260,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
-                                        className: "block text-[10px] text-[var(--color-text-muted)] uppercase tracking-widest mb-2",
+                                        className: "block text-[10px] text-[var(--color-text-muted)] uppercase tracking-widest mb-2.5",
                                         children: "Departure Window"
                                     }, void 0, false, {
                                         fileName: "[project]/packages/web/src/components/ResultFilters.tsx",
-                                        lineNumber: 299,
+                                        lineNumber: 295,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2296,12 +2278,12 @@ function ResultFilters({ results, filters, onChange, resultCount }) {
                                                         children: formatHour(i)
                                                     }, i, false, {
                                                         fileName: "[project]/packages/web/src/components/ResultFilters.tsx",
-                                                        lineNumber: 309,
+                                                        lineNumber: 305,
                                                         columnNumber: 21
                                                     }, this))
                                             }, void 0, false, {
                                                 fileName: "[project]/packages/web/src/components/ResultFilters.tsx",
-                                                lineNumber: 303,
+                                                lineNumber: 299,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -2309,7 +2291,7 @@ function ResultFilters({ results, filters, onChange, resultCount }) {
                                                 children: "to"
                                             }, void 0, false, {
                                                 fileName: "[project]/packages/web/src/components/ResultFilters.tsx",
-                                                lineNumber: 312,
+                                                lineNumber: 308,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("select", {
@@ -2325,24 +2307,24 @@ function ResultFilters({ results, filters, onChange, resultCount }) {
                                                         children: formatHour(i)
                                                     }, i, false, {
                                                         fileName: "[project]/packages/web/src/components/ResultFilters.tsx",
-                                                        lineNumber: 319,
+                                                        lineNumber: 315,
                                                         columnNumber: 21
                                                     }, this))
                                             }, void 0, false, {
                                                 fileName: "[project]/packages/web/src/components/ResultFilters.tsx",
-                                                lineNumber: 313,
+                                                lineNumber: 309,
                                                 columnNumber: 17
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/packages/web/src/components/ResultFilters.tsx",
-                                        lineNumber: 302,
+                                        lineNumber: 298,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/packages/web/src/components/ResultFilters.tsx",
-                                lineNumber: 298,
+                                lineNumber: 294,
                                 columnNumber: 13
                             }, this)
                         ]
@@ -2358,7 +2340,7 @@ function ResultFilters({ results, filters, onChange, resultCount }) {
                                 children: "Airlines"
                             }, void 0, false, {
                                 fileName: "[project]/packages/web/src/components/ResultFilters.tsx",
-                                lineNumber: 329,
+                                lineNumber: 325,
                                 columnNumber: 15
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2381,19 +2363,19 @@ function ResultFilters({ results, filters, onChange, resultCount }) {
                                         children: name
                                     }, code, false, {
                                         fileName: "[project]/packages/web/src/components/ResultFilters.tsx",
-                                        lineNumber: 336,
+                                        lineNumber: 332,
                                         columnNumber: 21
                                     }, this);
                                 })
                             }, void 0, false, {
                                 fileName: "[project]/packages/web/src/components/ResultFilters.tsx",
-                                lineNumber: 332,
+                                lineNumber: 328,
                                 columnNumber: 15
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/packages/web/src/components/ResultFilters.tsx",
-                        lineNumber: 328,
+                        lineNumber: 324,
                         columnNumber: 13
                     }, this),
                     activeFilterCount > 0 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -2402,7 +2384,7 @@ function ResultFilters({ results, filters, onChange, resultCount }) {
                         children: "Reset all filters"
                     }, void 0, false, {
                         fileName: "[project]/packages/web/src/components/ResultFilters.tsx",
-                        lineNumber: 363,
+                        lineNumber: 359,
                         columnNumber: 13
                     }, this)
                 ]
