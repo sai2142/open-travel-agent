@@ -53,11 +53,22 @@ function decodeUrlToOverrides(): Partial<SearchFormData> | null {
   return overrides;
 }
 
+interface MultiCityResults {
+  legs: Array<{
+    leg: MultiCityLeg;
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    offers: any[];
+    totalOffers: number;
+    provider: string;
+  }>;
+}
+
 type ViewState =
   | { type: 'idle' }
   | { type: 'loading'; mode: string }
   | { type: 'exact-results'; data: ExactResults }
   | { type: 'flex-results'; data: FlexResults }
+  | { type: 'multi-city-results'; data: MultiCityResults }
   | { type: 'error'; message: string };
 
 interface ExactResults {
