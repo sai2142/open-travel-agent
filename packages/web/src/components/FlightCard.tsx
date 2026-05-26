@@ -219,7 +219,7 @@ export default function FlightCard({ result, rank, priceLabel }: Props) {
       )}
 
       {/* Booking link */}
-      {offer.bookingUrl && (
+      {offer.bookingUrl && isValidBookingUrl(offer.bookingUrl) && (
         <div className="mt-3 pt-3 border-t border-white/[0.04]">
           <a
             href={offer.bookingUrl}
