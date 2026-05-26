@@ -1858,6 +1858,18 @@
   }
 
   @media (hover: hover) {
+    .hover\:bg-white\/\[0\.06\]:hover {
+      background-color: rgba(255, 255, 255, .06);
+    }
+
+    @supports (color: color-mix(in lab, red, red)) {
+      .hover\:bg-white\/\[0\.06\]:hover {
+        background-color: color-mix(in oklab, var(--color-white) 6%, transparent);
+      }
+    }
+  }
+
+  @media (hover: hover) {
     .hover\:from-indigo-500\/30:hover {
       --tw-gradient-from: rgba(98, 95, 255, .3);
     }

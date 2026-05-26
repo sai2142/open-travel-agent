@@ -285,10 +285,23 @@ export default function Home() {
 
         {view.type === 'exact-results' && (
           <div className="space-y-3">
-            {/* Provider badge */}
+            {/* Provider badge + Share */}
             <div className="flex items-center justify-between text-xs text-[var(--color-text-muted)] px-1">
               <span>{view.data.totalOffers} flights found</span>
-              <span className="glass-subtle px-2 py-0.5 rounded-full">via {view.data.provider}</span>
+              <div className="flex items-center gap-2">
+                <button
+                  onClick={handleShare}
+                  className="glass-subtle px-2.5 py-1 rounded-full flex items-center gap-1.5 hover:bg-white/[0.06] transition-colors text-[var(--color-text-secondary)]"
+                >
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
+                    <path d="M4 12v8a2 2 0 002 2h12a2 2 0 002-2v-8" />
+                    <polyline points="16 6 12 2 8 6" />
+                    <line x1="12" y1="2" x2="12" y2="15" />
+                  </svg>
+                  {shareToast ? 'Copied!' : 'Share'}
+                </button>
+                <span className="glass-subtle px-2 py-0.5 rounded-full">via {view.data.provider}</span>
+              </div>
             </div>
 
             {/* Price Insight */}
