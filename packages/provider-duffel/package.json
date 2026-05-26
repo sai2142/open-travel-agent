@@ -1,0 +1,15 @@
+{
+  "name": "@open-travel-agent/provider-duffel",
+  "version": "0.1.0",
+  "type": "module",
+  "main": "src/index.ts",
+  "types": "src/index.ts",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "dependencies": {
+    "@open-travel-agent/shared-types": "*",
+    "@duffel/api": "^2.0.0"
+  },
+  "license": "MIT"
+}
