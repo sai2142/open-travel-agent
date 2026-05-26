@@ -48,6 +48,7 @@ interface ScoredOffer {
 interface Props {
   result: ScoredOffer;
   rank: number;
+  priceLabel?: { label: string; color: string };
 }
 
 function parseDuration(iso: string): string {
