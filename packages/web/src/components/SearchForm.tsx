@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 
 export type SearchMode = 'exact' | 'date-flex' | 'weekend' | 'trip-length' | 'multi-city';
 
