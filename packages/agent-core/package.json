@@ -1,12 +1,30 @@
 {
   "name": "@open-travel-agent/agent-core",
-  "version": "0.1.0",
+  "version": "0.2.0",
+  "description": "Core scoring, flexible search, vault, and output engine for Open Travel Agent",
   "type": "module",
-  "main": "src/index.ts",
-  "types": "src/index.ts",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "exports": {
-    ".": "./src/index.ts"
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
   },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc -b",
+    "clean": "rimraf dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sai2142/open-travel-agent.git",
+    "directory": "packages/agent-core"
+  },
+  "keywords": ["travel", "flights", "scoring", "rewards", "agent"],
   "dependencies": {
     "@open-travel-agent/shared-types": "*",
     "argon2": "^0.41.0",
