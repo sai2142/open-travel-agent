@@ -134,7 +134,7 @@ function ItineraryRow({ itinerary, label }: { itinerary: Itinerary; label: strin
   );
 }
 
-export default function FlightCard({ result, rank }: Props) {
+export default function FlightCard({ result, rank, priceLabel }: Props) {
   const { offer, score, cardRecommendation } = result;
 
   return (
