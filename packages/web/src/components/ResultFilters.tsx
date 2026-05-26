@@ -239,8 +239,8 @@ export default function ResultFilters({ results, filters, onChange, resultCount 
                 }}
                 className="w-full accent-indigo-500 mb-2"
               />
-              <div className="relative">
-                <span className="absolute left-2.5 top-1/2 -translate-y-1/2 text-[11px] text-[var(--color-text-muted)]">$</span>
+              <div className="flex items-center gap-1.5 bg-white/[0.03] border border-white/[0.07] rounded-lg px-3 py-2">
+                <span className="text-[13px] text-[var(--color-text-muted)] font-medium">$</span>
                 <input
                   type="number"
                   min={0}
@@ -251,7 +251,7 @@ export default function ResultFilters({ results, filters, onChange, resultCount 
                     const val = e.target.value ? Number(e.target.value) : null;
                     update({ maxPrice: val });
                   }}
-                  className="input-field text-xs pl-6 py-1.5 !rounded-lg w-full"
+                  className="bg-transparent text-[13px] text-[var(--color-text-primary)] outline-none w-full placeholder:text-[var(--color-text-muted)]"
                 />
               </div>
             </div>
@@ -273,7 +273,7 @@ export default function ResultFilters({ results, filters, onChange, resultCount 
                 }}
                 className="w-full accent-indigo-500 mb-2"
               />
-              <div className="relative">
+              <div className="flex items-center gap-1.5 bg-white/[0.03] border border-white/[0.07] rounded-lg px-3 py-2">
                 <input
                   type="number"
                   min={1}
@@ -284,9 +284,9 @@ export default function ResultFilters({ results, filters, onChange, resultCount 
                     const val = e.target.value ? Number(e.target.value) : null;
                     update({ maxDuration: val });
                   }}
-                  className="input-field text-xs py-1.5 pr-8 !rounded-lg w-full"
+                  className="bg-transparent text-[13px] text-[var(--color-text-primary)] outline-none w-full placeholder:text-[var(--color-text-muted)]"
                 />
-                <span className="absolute right-2.5 top-1/2 -translate-y-1/2 text-[11px] text-[var(--color-text-muted)]">hr</span>
+                <span className="text-[13px] text-[var(--color-text-muted)] font-medium shrink-0">hours</span>
               </div>
             </div>
 
@@ -295,26 +295,30 @@ export default function ResultFilters({ results, filters, onChange, resultCount 
               <label className="block text-[10px] text-[var(--color-text-muted)] uppercase tracking-widest mb-2.5">
                 Departure Window
               </label>
-              <div className="flex items-center gap-2">
-                <select
-                  value={filters.departTimeMin}
-                  onChange={(e) => update({ departTimeMin: Number(e.target.value) })}
-                  className="input-field text-xs py-1.5 !rounded-lg flex-1"
-                >
-                  {Array.from({ length: 24 }, (_, i) => (
-                    <option key={i} value={i}>{formatHour(i)}</option>
-                  ))}
-                </select>
-                <span className="text-[10px] text-[var(--color-text-muted)]">to</span>
-                <select
-                  value={filters.departTimeMax}
-                  onChange={(e) => update({ departTimeMax: Number(e.target.value) })}
-                  className="input-field text-xs py-1.5 !rounded-lg flex-1"
-                >
-                  {Array.from({ length: 24 }, (_, i) => (
-                    <option key={i} value={i}>{formatHour(i)}</option>
-                  ))}
-                </select>
+              <div className="flex items-center gap-2 mt-1">
+                <div className="flex-1 bg-white/[0.03] border border-white/[0.07] rounded-lg px-3 py-2">
+                  <select
+                    value={filters.departTimeMin}
+                    onChange={(e) => update({ departTimeMin: Number(e.target.value) })}
+                    className="bg-transparent text-[13px] text-[var(--color-text-primary)] outline-none w-full cursor-pointer"
+                  >
+                    {Array.from({ length: 24 }, (_, i) => (
+                      <option key={i} value={i}>{formatHour(i)}</option>
+                    ))}
+                  </select>
+                </div>
+                <span className="text-[13px] text-[var(--color-text-muted)] font-medium">to</span>
+                <div className="flex-1 bg-white/[0.03] border border-white/[0.07] rounded-lg px-3 py-2">
+                  <select
+                    value={filters.departTimeMax}
+                    onChange={(e) => update({ departTimeMax: Number(e.target.value) })}
+                    className="bg-transparent text-[13px] text-[var(--color-text-primary)] outline-none w-full cursor-pointer"
+                  >
+                    {Array.from({ length: 24 }, (_, i) => (
+                      <option key={i} value={i}>{formatHour(i)}</option>
+                    ))}
+                  </select>
+                </div>
               </div>
             </div>
           </div>
