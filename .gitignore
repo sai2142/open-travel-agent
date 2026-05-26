@@ -12,3 +12,4 @@ vault.enc.salt
 coverage/
 .vscode/
 .git-rewrite/
+*.tsbuildinfo
