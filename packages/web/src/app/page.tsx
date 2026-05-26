@@ -119,6 +119,8 @@ export default function Home() {
   const handleSearch = async (form: SearchFormData) => {
     setView({ type: 'loading', mode: form.mode });
     setFilters(getDefaultFilters());
+    setLastSearchForm(form);
+    window.history.replaceState(null, '', encodeSearchToUrl(form));
 
     try {
       if (form.mode === 'exact') {
