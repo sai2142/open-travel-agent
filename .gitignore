@@ -11,3 +11,4 @@ vault.enc.salt
 *.log
 coverage/
 .vscode/
+.git-rewrite/
