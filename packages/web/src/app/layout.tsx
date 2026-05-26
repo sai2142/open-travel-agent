@@ -30,7 +30,9 @@ export default function RootLayout({
         <div className="orb orb-1" />
         <div className="orb orb-2" />
         <div className="orb orb-3" />
-        <div className="relative z-10">{children}</div>
+        <div className="relative z-10">
+          <ErrorBoundary>{children}</ErrorBoundary>
+        </div>
       </body>
     </html>
   );
