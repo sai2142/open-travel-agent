@@ -5,6 +5,8 @@ import { MockFlightProvider } from '@open-travel-agent/provider-mock';
 import { DuffelFlightProvider } from '@open-travel-agent/provider-duffel';
 
 const IATA_RE = /^[A-Z]{3,4}$/;
+const DATE_RE = /^\d{4}-\d{2}-\d{2}$/;
+const MONTH_RE = /^\d{4}-\d{2}$/;
 const VALID_MODES = new Set(['exact', 'date-flex', 'weekend', 'trip-length']);
 
 function getProvider(): FlightProvider {
