@@ -73,6 +73,12 @@ export default function SearchForm({ onSearch, loading, overrides }: Props) {
     tripLengthMax: 5,
   });
 
+  useEffect(() => {
+    if (overrides) {
+      setForm((prev) => ({ ...prev, ...overrides }));
+    }
+  }, [overrides]);
+
   const update = (field: keyof SearchFormData, value: string | number | boolean) =>
     setForm((prev) => ({ ...prev, [field]: value }));
 
