@@ -1,0 +1,1 @@
+{"root":["./src/cli.ts","./src/cli/book-cmd.ts","./src/cli/cards-cmd.ts","./src/cli/search.ts","./src/cli/vault-cmd.ts"],"errors":true,"version":"5.9.3"}
