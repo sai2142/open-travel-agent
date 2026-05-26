@@ -30,6 +30,7 @@ interface Props {
   onSearch: (data: SearchFormData) => void;
   loading: boolean;
   overrides?: Partial<SearchFormData> | null;
+  autoSubmit?: boolean;
 }
 
 const cabinOptions = [
