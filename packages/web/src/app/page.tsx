@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect, useCallback } from 'react';
 import SearchForm, { type SearchFormData } from '@/components/SearchForm';
 import NaturalLanguageBar from '@/components/NaturalLanguageBar';
 import FlightCard from '@/components/FlightCard';
@@ -8,6 +8,50 @@ import DateGrid from '@/components/DateGrid';
 import ResultFilters, { applyFilters, getDefaultFilters, type FilterState } from '@/components/ResultFilters';
 import PriceInsight, { getPriceLabel } from '@/components/PriceInsight';
 import { ResultsSkeleton } from '@/components/LoadingSkeleton';
+
+function encodeSearchToUrl(form: SearchFormData): string {
+  const params = new URLSearchParams();
+  if (form.origin) params.set('from', form.origin);
+  if (form.destination) params.set('to', form.destination);
+  params.set('mode', form.mode);
+  if (form.mode === 'exact' || form.mode === 'date-flex') {
+    if (form.departureDate) params.set('depart', form.departureDate);
+    if (form.returnDate) params.set('return', form.returnDate);
+  }
+  if (form.mode === 'date-flex' && form.flexDays) params.set('flex', String(form.flexDays));
+  if (form.mode === 'weekend' || form.mode === 'trip-length') {
+    if (form.weekendMonth) params.set('month', form.weekendMonth);
+  }
+  if (form.mode === 'trip-length') {
+    if (form.tripLengthMin) params.set('mindays', String(form.tripLengthMin));
+    if (form.tripLengthMax) params.set('maxdays', String(form.tripLengthMax));
+  }
+  if (form.passengers > 1) params.set('pax', String(form.passengers));
+  if (form.cabin !== 'ECONOMY') params.set('cabin', form.cabin);
+  if (form.directOnly) params.set('direct', '1');
+  return `${window.location.pathname}?${params.toString()}`;
+}
+
+function decodeUrlToOverrides(): Partial<SearchFormData> | null {
+  if (typeof window === 'undefined') return null;
+  const params = new URLSearchParams(window.location.search);
+  if (!params.has('from') && !params.has('to')) return null;
+
+  const overrides: Partial<SearchFormData> = {};
+  if (params.has('from')) overrides.origin = params.get('from')!.toUpperCase();
+  if (params.has('to')) overrides.destination = params.get('to')!.toUpperCase();
+  if (params.has('mode')) overrides.mode = params.get('mode') as SearchFormData['mode'];
+  if (params.has('depart')) overrides.departureDate = params.get('depart')!;
+  if (params.has('return')) overrides.returnDate = params.get('return')!;
+  if (params.has('flex')) overrides.flexDays = Number(params.get('flex'));
+  if (params.has('month')) overrides.weekendMonth = params.get('month')!;
+  if (params.has('mindays')) overrides.tripLengthMin = Number(params.get('mindays'));
+  if (params.has('maxdays')) overrides.tripLengthMax = Number(params.get('maxdays'));
+  if (params.has('pax')) overrides.passengers = Number(params.get('pax'));
+  if (params.has('cabin')) overrides.cabin = params.get('cabin')!;
+  if (params.has('direct')) overrides.directOnly = params.get('direct') === '1';
+  return overrides;
+}
 
 type ViewState =
   | { type: 'idle' }
