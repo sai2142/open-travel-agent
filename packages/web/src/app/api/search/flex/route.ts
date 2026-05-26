@@ -21,16 +21,39 @@ function getProvider(): FlightProvider {
 }
 
 function validate(body: Record<string, unknown>): string | null {
-  if (!body.mode || !VALID_MODES.has(String(body.mode)))
-    return 'Invalid search mode';
+  const mode = String(body.mode || '');
+  if (!VALID_MODES.has(mode)) return 'Invalid search mode';
   const origin = String(body.origin || '').toUpperCase();
   const destination = String(body.destination || '').toUpperCase();
   if (!IATA_RE.test(origin)) return 'Invalid origin airport code';
   if (!IATA_RE.test(destination)) return 'Invalid destination airport code';
+  if (origin === destination) return 'Origin and destination must be different';
   const passengers = Number(body.passengers || 1);
-  if (passengers < 1 || passengers > 9) return 'Passengers must be 1-9';
+  if (!Number.isInteger(passengers) || passengers < 1 || passengers > 9)
+    return 'Passengers must be 1-9';
   const maxCombinations = Number(body.maxCombinations || 30);
   if (maxCombinations > 100) return 'maxCombinations cannot exceed 100';
+
+  if (mode === 'date-flex') {
+    if (!body.departureDate || !DATE_RE.test(String(body.departureDate)))
+      return 'departureDate required for date-flex mode';
+    const flexDays = Number(body.flexDays || 0);
+    if (flexDays < 1 || flexDays > 14) return 'flexDays must be 1-14';
+  }
+
+  if (mode === 'weekend' || mode === 'trip-length') {
+    if (!body.targetMonth || !MONTH_RE.test(String(body.targetMonth)))
+      return 'targetMonth required (YYYY-MM)';
+  }
+
+  if (mode === 'trip-length') {
+    const min = Number(body.tripLengthMin || 0);
+    const max = Number(body.tripLengthMax || 0);
+    if (min < 1 || min > 30) return 'tripLengthMin must be 1-30';
+    if (max < 1 || max > 30) return 'tripLengthMax must be 1-30';
+    if (min > max) return 'tripLengthMin cannot exceed tripLengthMax';
+  }
+
   return null;
 }
 
