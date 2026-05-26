@@ -57,7 +57,7 @@ function getNextWeek(): string {
   return d.toISOString().split('T')[0];
 }
 
-export default function SearchForm({ onSearch, loading }: Props) {
+export default function SearchForm({ onSearch, loading, overrides }: Props) {
   const [form, setForm] = useState<SearchFormData>({
     origin: '',
     destination: '',

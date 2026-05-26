@@ -68,7 +68,7 @@ function getNextWeek() {
     return d.toISOString().split('T')[0];
 }
 function SearchForm(param) {
-    let { onSearch, loading } = param;
+    let { onSearch, loading, overrides } = param;
     _s();
     const [form, setForm] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])({
         origin: '',
