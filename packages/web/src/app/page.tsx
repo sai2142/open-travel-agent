@@ -388,6 +388,59 @@ export default function Home() {
             <DateGrid result={view.data as any} />
           </div>
         )}
+
+        {view.type === 'multi-city-results' && (
+          <div className="space-y-6">
+            {view.data.legs.map((legResult, legIdx) => {
+              const legPrices = legResult.offers.map((r: { offer: { price: { total: number } } }) => r.offer.price.total);
+              return (
+                <div key={legIdx} className="space-y-3">
+                  <div className="flex items-center gap-3 px-1">
+                    <span className="text-xs font-bold px-2.5 py-1 rounded-lg bg-gradient-to-r from-indigo-500/20 to-purple-500/20 text-indigo-300 border border-indigo-500/20">
+                      Leg {legIdx + 1}
+                    </span>
+                    <span className="text-sm font-semibold">
+                      {legResult.leg.origin}
+                      <span className="text-[var(--color-text-muted)] mx-1.5">→</span>
+                      {legResult.leg.destination}
+                    </span>
+                    <span className="text-xs text-[var(--color-text-muted)]">
+                      {new Date(legResult.leg.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}
+                    </span>
+                    <div className="flex-1" />
+                    <span className="text-xs text-[var(--color-text-muted)]">
+                      {legResult.totalOffers} flights
+                    </span>
+                  </div>
+                  <PriceInsight prices={legPrices} />
+                  {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
+                  {legResult.offers.slice(0, 5).map((result: any, i: number) => (
+                    <FlightCard
+                      key={`${legIdx}-${i}`}
+                      result={result}
+                      rank={i}
+                      priceLabel={getPriceLabel(result.offer.price.total, legPrices)}
+                    />
+                  ))}
+                </div>
+              );
+            })}
+
+            {/* Total cost summary */}
+            <div className="glass p-4">
+              <div className="flex items-center justify-between">
+                <span className="text-sm text-[var(--color-text-secondary)]">Cheapest combination (top results)</span>
+                <span className="text-lg font-bold">
+                  <span className="text-[var(--color-text-muted)] text-sm font-normal">$</span>
+                  {view.data.legs.reduce((sum, leg) => {
+                    const cheapest = leg.offers[0]?.offer?.price?.total ?? 0;
+                    return sum + cheapest;
+                  }, 0).toLocaleString('en-US', { minimumFractionDigits: 0 })}
+                </span>
+              </div>
+            </div>
+          </div>
+        )}
       </section>
 
       {/* Footer */}
