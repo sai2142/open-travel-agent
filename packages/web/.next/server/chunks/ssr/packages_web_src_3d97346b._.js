@@ -1621,7 +1621,8 @@ function Home() {
     });
     const handleSearch = async (form)=>{
         setView({
-            type: 'loading'
+            type: 'loading',
+            mode: form.mode
         });
         try {
             if (form.mode === 'exact') {
@@ -1687,66 +1688,156 @@ function Home() {
             });
         }
     };
+    const isIdle = view.type === 'idle';
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("main", {
         className: "min-h-screen flex flex-col",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("header", {
-                className: "pt-12 pb-2 px-6 text-center",
-                children: [
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
-                        className: "text-3xl md:text-4xl font-bold tracking-tight",
-                        children: [
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                className: "text-[var(--color-accent)]",
-                                children: "Open"
+                className: `px-6 text-center transition-all duration-500 ${isIdle ? 'pt-[18vh] pb-4' : 'pt-8 pb-2'}`,
+                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                    className: `transition-all duration-500 ${isIdle ? 'scale-100' : 'scale-90'}`,
+                    children: [
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
+                            className: `font-bold tracking-tight transition-all duration-500 ${isIdle ? 'text-5xl md:text-7xl' : 'text-2xl md:text-3xl'}`,
+                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                className: "bg-gradient-to-r from-indigo-400 via-violet-400 to-purple-400 bg-clip-text text-transparent",
+                                children: "Flyte"
                             }, void 0, false, {
                                 fileName: "[project]/packages/web/src/app/page.tsx",
-                                lineNumber: 123,
-                                columnNumber: 11
-                            }, this),
-                            " Travel Agent"
-                        ]
-                    }, void 0, true, {
-                        fileName: "[project]/packages/web/src/app/page.tsx",
-                        lineNumber: 122,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                        className: "text-sm text-[var(--color-text-muted)] mt-2 max-w-md mx-auto",
-                        children: "Search 300+ airlines. Optimize for your credit card rewards. Find the cheapest dates."
-                    }, void 0, false, {
-                        fileName: "[project]/packages/web/src/app/page.tsx",
-                        lineNumber: 125,
-                        columnNumber: 9
-                    }, this)
-                ]
-            }, void 0, true, {
+                                lineNumber: 112,
+                                columnNumber: 13
+                            }, this)
+                        }, void 0, false, {
+                            fileName: "[project]/packages/web/src/app/page.tsx",
+                            lineNumber: 111,
+                            columnNumber: 11
+                        }, this),
+                        isIdle && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                            className: "text-base md:text-lg text-[var(--color-text-secondary)] mt-4 max-w-lg mx-auto leading-relaxed fade-in",
+                            children: [
+                                "Search 300+ airlines. Find the cheapest dates.",
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
+                                    fileName: "[project]/packages/web/src/app/page.tsx",
+                                    lineNumber: 119,
+                                    columnNumber: 15
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                    className: "text-[var(--color-text-muted)]",
+                                    children: "Optimized for your credit card rewards."
+                                }, void 0, false, {
+                                    fileName: "[project]/packages/web/src/app/page.tsx",
+                                    lineNumber: 120,
+                                    columnNumber: 15
+                                }, this)
+                            ]
+                        }, void 0, true, {
+                            fileName: "[project]/packages/web/src/app/page.tsx",
+                            lineNumber: 117,
+                            columnNumber: 13
+                        }, this)
+                    ]
+                }, void 0, true, {
+                    fileName: "[project]/packages/web/src/app/page.tsx",
+                    lineNumber: 110,
+                    columnNumber: 9
+                }, this)
+            }, void 0, false, {
                 fileName: "[project]/packages/web/src/app/page.tsx",
-                lineNumber: 121,
+                lineNumber: 109,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
-                className: "px-4 py-8",
+                className: `px-4 transition-all duration-500 ${isIdle ? 'py-10' : 'py-4'}`,
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$packages$2f$web$2f$src$2f$components$2f$SearchForm$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
                     onSearch: handleSearch,
                     loading: view.type === 'loading'
                 }, void 0, false, {
                     fileName: "[project]/packages/web/src/app/page.tsx",
-                    lineNumber: 132,
+                    lineNumber: 128,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/packages/web/src/app/page.tsx",
-                lineNumber: 131,
+                lineNumber: 127,
                 columnNumber: 7
+            }, this),
+            isIdle && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
+                className: "px-4 pb-12 max-w-3xl mx-auto w-full fade-in",
+                style: {
+                    animationDelay: '200ms'
+                },
+                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                    className: "flex flex-wrap justify-center gap-3",
+                    children: [
+                        {
+                            icon: '✈',
+                            text: '300+ Airlines'
+                        },
+                        {
+                            icon: '📅',
+                            text: 'Flexible Dates'
+                        },
+                        {
+                            icon: '💳',
+                            text: 'Rewards Scoring'
+                        },
+                        {
+                            icon: '⚡',
+                            text: 'Real-time Pricing'
+                        }
+                    ].map((pill)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                            className: "glass-subtle px-4 py-2 flex items-center gap-2 text-sm text-[var(--color-text-secondary)]",
+                            children: [
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                    children: pill.icon
+                                }, void 0, false, {
+                                    fileName: "[project]/packages/web/src/app/page.tsx",
+                                    lineNumber: 145,
+                                    columnNumber: 17
+                                }, this),
+                                pill.text
+                            ]
+                        }, pill.text, true, {
+                            fileName: "[project]/packages/web/src/app/page.tsx",
+                            lineNumber: 141,
+                            columnNumber: 15
+                        }, this))
+                }, void 0, false, {
+                    fileName: "[project]/packages/web/src/app/page.tsx",
+                    lineNumber: 134,
+                    columnNumber: 11
+                }, this)
+            }, void 0, false, {
+                fileName: "[project]/packages/web/src/app/page.tsx",
+                lineNumber: 133,
+                columnNumber: 9
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
                 className: "px-4 pb-16 max-w-3xl mx-auto w-full",
                 children: [
-                    view.type === 'loading' && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$packages$2f$web$2f$src$2f$components$2f$LoadingSkeleton$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["ResultsSkeleton"], {}, void 0, false, {
+                    view.type === 'loading' && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "space-y-4",
+                        children: [
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "text-center text-sm text-[var(--color-text-muted)] fade-in",
+                                children: view.mode === 'exact' ? 'Searching flights...' : 'Searching date combinations...'
+                            }, void 0, false, {
+                                fileName: "[project]/packages/web/src/app/page.tsx",
+                                lineNumber: 157,
+                                columnNumber: 13
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$packages$2f$web$2f$src$2f$components$2f$LoadingSkeleton$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["ResultsSkeleton"], {
+                                count: view.mode === 'exact' ? 4 : 6
+                            }, void 0, false, {
+                                fileName: "[project]/packages/web/src/app/page.tsx",
+                                lineNumber: 162,
+                                columnNumber: 13
+                            }, this)
+                        ]
+                    }, void 0, true, {
                         fileName: "[project]/packages/web/src/app/page.tsx",
-                        lineNumber: 137,
-                        columnNumber: 37
+                        lineNumber: 156,
+                        columnNumber: 11
                     }, this),
                     view.type === 'error' && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: "glass p-6 border-l-2 border-l-[var(--color-danger)] fade-in",
@@ -1756,7 +1847,7 @@ function Home() {
                                 children: "Search Error"
                             }, void 0, false, {
                                 fileName: "[project]/packages/web/src/app/page.tsx",
-                                lineNumber: 141,
+                                lineNumber: 168,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1764,20 +1855,20 @@ function Home() {
                                 children: view.message
                             }, void 0, false, {
                                 fileName: "[project]/packages/web/src/app/page.tsx",
-                                lineNumber: 142,
+                                lineNumber: 169,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/packages/web/src/app/page.tsx",
-                        lineNumber: 140,
+                        lineNumber: 167,
                         columnNumber: 11
                     }, this),
                     view.type === 'exact-results' && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "space-y-3",
+                        className: "space-y-3 fade-in",
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "flex items-center justify-between text-xs text-[var(--color-text-muted)] px-1",
+                                className: "flex items-center justify-between text-xs text-[var(--color-text-muted)] px-1 pb-1",
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                         children: [
@@ -1786,23 +1877,24 @@ function Home() {
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/packages/web/src/app/page.tsx",
-                                        lineNumber: 149,
+                                        lineNumber: 176,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                        className: "glass-subtle px-2 py-0.5 rounded-full",
                                         children: [
                                             "via ",
                                             view.data.provider
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/packages/web/src/app/page.tsx",
-                                        lineNumber: 150,
+                                        lineNumber: 177,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/packages/web/src/app/page.tsx",
-                                lineNumber: 148,
+                                lineNumber: 175,
                                 columnNumber: 13
                             }, this),
                             view.data.offers.length === 0 ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1810,21 +1902,21 @@ function Home() {
                                 children: "No flights found. Try adjusting your search."
                             }, void 0, false, {
                                 fileName: "[project]/packages/web/src/app/page.tsx",
-                                lineNumber: 153,
+                                lineNumber: 180,
                                 columnNumber: 15
-                            }, this) : view.data.offers.map((result, i)=>// eslint-disable-next-line @typescript-eslint/no-explicit-any
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$packages$2f$web$2f$src$2f$components$2f$FlightCard$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
+                            }, this) : // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                            view.data.offers.map((result, i)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$packages$2f$web$2f$src$2f$components$2f$FlightCard$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
                                     result: result,
                                     rank: i
                                 }, i, false, {
                                     fileName: "[project]/packages/web/src/app/page.tsx",
-                                    lineNumber: 159,
+                                    lineNumber: 186,
                                     columnNumber: 17
                                 }, this))
                         ]
                     }, void 0, true, {
                         fileName: "[project]/packages/web/src/app/page.tsx",
-                        lineNumber: 147,
+                        lineNumber: 174,
                         columnNumber: 11
                     }, this),
                     view.type === 'flex-results' && // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -1832,27 +1924,38 @@ function Home() {
                         result: view.data
                     }, void 0, false, {
                         fileName: "[project]/packages/web/src/app/page.tsx",
-                        lineNumber: 167,
+                        lineNumber: 194,
                         columnNumber: 11
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/packages/web/src/app/page.tsx",
-                lineNumber: 136,
+                lineNumber: 154,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("footer", {
-                className: "mt-auto py-6 text-center text-xs text-[var(--color-text-muted)]",
-                children: "Open Travel Agent v0.2.0 · Sandbox Mode"
-            }, void 0, false, {
+                className: "mt-auto py-6 text-center text-[11px] text-[var(--color-text-muted)] tracking-wide",
+                children: [
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                        className: "bg-gradient-to-r from-indigo-400/60 to-purple-400/60 bg-clip-text text-transparent font-medium",
+                        children: "Flyte"
+                    }, void 0, false, {
+                        fileName: "[project]/packages/web/src/app/page.tsx",
+                        lineNumber: 200,
+                        columnNumber: 9
+                    }, this),
+                    ' ',
+                    "v0.3.0"
+                ]
+            }, void 0, true, {
                 fileName: "[project]/packages/web/src/app/page.tsx",
-                lineNumber: 172,
+                lineNumber: 199,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/packages/web/src/app/page.tsx",
-        lineNumber: 119,
+        lineNumber: 107,
         columnNumber: 5
     }, this);
 }

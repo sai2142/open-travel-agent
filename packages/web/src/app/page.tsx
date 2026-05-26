@@ -8,27 +8,13 @@ import { ResultsSkeleton } from '@/components/LoadingSkeleton';
 
 type ViewState =
   | { type: 'idle' }
-  | { type: 'loading' }
+  | { type: 'loading'; mode: string }
   | { type: 'exact-results'; data: ExactResults }
   | { type: 'flex-results'; data: FlexResults }
   | { type: 'error'; message: string };
 
 interface ExactResults {
-  offers: Array<{
-    offer: {
-      id: string;
-      provider: string;
-      outbound: { segments: Array<Record<string, unknown>>; duration: string; stops: number };
-      inbound?: { segments: Array<Record<string, unknown>>; duration: string; stops: number };
-      price: { total: number; currency: string; perPassenger?: number };
-      seatsRemaining?: number;
-      bookingUrl?: string;
-      validatingCarrier?: string;
-    };
-    score: number;
-    breakdown: Record<string, number>;
-    cardRecommendation?: Record<string, unknown>;
-  }>;
+  offers: Array<Record<string, unknown>>;
   totalOffers: number;
   provider: string;
 }
@@ -54,7 +40,7 @@ export default function Home() {
   const [view, setView] = useState<ViewState>({ type: 'idle' });
 
   const handleSearch = async (form: SearchFormData) => {
-    setView({ type: 'loading' });
+    setView({ type: 'loading', mode: form.mode });
 
     try {
       if (form.mode === 'exact') {
@@ -115,26 +101,67 @@ export default function Home() {
     }
   };
 
+  const isIdle = view.type === 'idle';
+
   return (
     <main className="min-h-screen flex flex-col">
-      {/* Header */}
-      <header className="pt-12 pb-2 px-6 text-center">
-        <h1 className="text-3xl md:text-4xl font-bold tracking-tight">
-          <span className="text-[var(--color-accent)]">Open</span> Travel Agent
-        </h1>
-        <p className="text-sm text-[var(--color-text-muted)] mt-2 max-w-md mx-auto">
-          Search 300+ airlines. Optimize for your credit card rewards. Find the cheapest dates.
-        </p>
+      {/* Hero / Header */}
+      <header className={`px-6 text-center transition-all duration-500 ${isIdle ? 'pt-[18vh] pb-4' : 'pt-8 pb-2'}`}>
+        <div className={`transition-all duration-500 ${isIdle ? 'scale-100' : 'scale-90'}`}>
+          <h1 className={`font-bold tracking-tight transition-all duration-500 ${isIdle ? 'text-5xl md:text-7xl' : 'text-2xl md:text-3xl'}`}>
+            <span className="bg-gradient-to-r from-indigo-400 via-violet-400 to-purple-400 bg-clip-text text-transparent">
+              Flyte
+            </span>
+          </h1>
+          {isIdle && (
+            <p className="text-base md:text-lg text-[var(--color-text-secondary)] mt-4 max-w-lg mx-auto leading-relaxed fade-in">
+              Search 300+ airlines. Find the cheapest dates.
+              <br />
+              <span className="text-[var(--color-text-muted)]">Optimized for your credit card rewards.</span>
+            </p>
+          )}
+        </div>
       </header>
 
       {/* Search Form */}
-      <section className="px-4 py-8">
+      <section className={`px-4 transition-all duration-500 ${isIdle ? 'py-10' : 'py-4'}`}>
         <SearchForm onSearch={handleSearch} loading={view.type === 'loading'} />
       </section>
 
+      {/* Feature Pills — only on idle */}
+      {isIdle && (
+        <section className="px-4 pb-12 max-w-3xl mx-auto w-full fade-in" style={{ animationDelay: '200ms' }}>
+          <div className="flex flex-wrap justify-center gap-3">
+            {[
+              { icon: '✈', text: '300+ Airlines' },
+              { icon: '📅', text: 'Flexible Dates' },
+              { icon: '💳', text: 'Rewards Scoring' },
+              { icon: '⚡', text: 'Real-time Pricing' },
+            ].map((pill) => (
+              <div
+                key={pill.text}
+                className="glass-subtle px-4 py-2 flex items-center gap-2 text-sm text-[var(--color-text-secondary)]"
+              >
+                <span>{pill.icon}</span>
+                {pill.text}
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
+
       {/* Results */}
       <section className="px-4 pb-16 max-w-3xl mx-auto w-full">
-        {view.type === 'loading' && <ResultsSkeleton />}
+        {view.type === 'loading' && (
+          <div className="space-y-4">
+            <div className="text-center text-sm text-[var(--color-text-muted)] fade-in">
+              {view.mode === 'exact'
+                ? 'Searching flights...'
+                : 'Searching date combinations...'}
+            </div>
+            <ResultsSkeleton count={view.mode === 'exact' ? 4 : 6} />
+          </div>
+        )}
 
         {view.type === 'error' && (
           <div className="glass p-6 border-l-2 border-l-[var(--color-danger)] fade-in">
@@ -144,19 +171,19 @@ export default function Home() {
         )}
 
         {view.type === 'exact-results' && (
-          <div className="space-y-3">
-            <div className="flex items-center justify-between text-xs text-[var(--color-text-muted)] px-1">
+          <div className="space-y-3 fade-in">
+            <div className="flex items-center justify-between text-xs text-[var(--color-text-muted)] px-1 pb-1">
               <span>{view.data.totalOffers} flights found</span>
-              <span>via {view.data.provider}</span>
+              <span className="glass-subtle px-2 py-0.5 rounded-full">via {view.data.provider}</span>
             </div>
             {view.data.offers.length === 0 ? (
               <div className="glass p-8 text-center text-[var(--color-text-muted)]">
                 No flights found. Try adjusting your search.
               </div>
             ) : (
-              view.data.offers.map((result: Record<string, unknown>, i: number) => (
-                // eslint-disable-next-line @typescript-eslint/no-explicit-any
-                <FlightCard key={i} result={result as any} rank={i} />
+              // eslint-disable-next-line @typescript-eslint/no-explicit-any
+              view.data.offers.map((result: any, i: number) => (
+                <FlightCard key={i} result={result} rank={i} />
               ))
             )}
           </div>
@@ -169,8 +196,11 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="mt-auto py-6 text-center text-xs text-[var(--color-text-muted)]">
-        Open Travel Agent v0.2.0 &middot; Sandbox Mode
+      <footer className="mt-auto py-6 text-center text-[11px] text-[var(--color-text-muted)] tracking-wide">
+        <span className="bg-gradient-to-r from-indigo-400/60 to-purple-400/60 bg-clip-text text-transparent font-medium">
+          Flyte
+        </span>
+        {' '}v0.3.0
       </footer>
     </main>
   );
