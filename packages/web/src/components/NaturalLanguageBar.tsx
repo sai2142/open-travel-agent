@@ -54,7 +54,8 @@ export default function NaturalLanguageBar({ onParsed }: Props) {
 
       onParsed(formData);
       setQuery('');
-    } catch {
+    } catch (err) {
+      console.error('NL parse error:', err);
       setError('Failed to parse your request');
     } finally {
       setParsing(false);
