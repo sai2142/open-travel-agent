@@ -242,7 +242,8 @@ export default function Home() {
                 No flights match your filters. Try adjusting them.
               </div>
             ) : (
-              filteredResults.map((result, i) => (
+              // eslint-disable-next-line @typescript-eslint/no-explicit-any
+              filteredResults.map((result: any, i: number) => (
                 <FlightCard
                   key={i}
                   result={result}
