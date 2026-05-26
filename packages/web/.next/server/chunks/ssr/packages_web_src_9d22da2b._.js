@@ -166,7 +166,7 @@ function SearchForm({ onSearch, loading, overrides }) {
                     lineNumber: 118,
                     columnNumber: 9
                 }, this),
-                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                form.mode !== 'multi-city' && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                     className: "flex items-end gap-2",
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -177,8 +177,8 @@ function SearchForm({ onSearch, loading, overrides }) {
                                     children: "From"
                                 }, void 0, false, {
                                     fileName: "[project]/packages/web/src/components/SearchForm.tsx",
-                                    lineNumber: 139,
-                                    columnNumber: 13
+                                    lineNumber: 140,
+                                    columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
                                     type: "text",
@@ -190,14 +190,14 @@ function SearchForm({ onSearch, loading, overrides }) {
                                     required: true
                                 }, void 0, false, {
                                     fileName: "[project]/packages/web/src/components/SearchForm.tsx",
-                                    lineNumber: 142,
-                                    columnNumber: 13
+                                    lineNumber: 143,
+                                    columnNumber: 15
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/packages/web/src/components/SearchForm.tsx",
-                            lineNumber: 138,
-                            columnNumber: 11
+                            lineNumber: 139,
+                            columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                             type: "button",
@@ -217,15 +217,15 @@ function SearchForm({ onSearch, loading, overrides }) {
                                         d: "M7 16l-4-4 4-4"
                                     }, void 0, false, {
                                         fileName: "[project]/packages/web/src/components/SearchForm.tsx",
-                                        lineNumber: 160,
-                                        columnNumber: 15
+                                        lineNumber: 161,
+                                        columnNumber: 17
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
                                         d: "M17 8l4 4-4 4"
                                     }, void 0, false, {
                                         fileName: "[project]/packages/web/src/components/SearchForm.tsx",
-                                        lineNumber: 161,
-                                        columnNumber: 15
+                                        lineNumber: 162,
+                                        columnNumber: 17
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("line", {
                                         x1: "3",
@@ -234,19 +234,19 @@ function SearchForm({ onSearch, loading, overrides }) {
                                         y2: "12"
                                     }, void 0, false, {
                                         fileName: "[project]/packages/web/src/components/SearchForm.tsx",
-                                        lineNumber: 162,
-                                        columnNumber: 15
+                                        lineNumber: 163,
+                                        columnNumber: 17
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/packages/web/src/components/SearchForm.tsx",
-                                lineNumber: 159,
-                                columnNumber: 13
+                                lineNumber: 160,
+                                columnNumber: 15
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/packages/web/src/components/SearchForm.tsx",
-                            lineNumber: 153,
-                            columnNumber: 11
+                            lineNumber: 154,
+                            columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                             className: "flex-1",
@@ -256,8 +256,8 @@ function SearchForm({ onSearch, loading, overrides }) {
                                     children: "To"
                                 }, void 0, false, {
                                     fileName: "[project]/packages/web/src/components/SearchForm.tsx",
-                                    lineNumber: 167,
-                                    columnNumber: 13
+                                    lineNumber: 168,
+                                    columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
                                     type: "text",
@@ -269,20 +269,279 @@ function SearchForm({ onSearch, loading, overrides }) {
                                     required: true
                                 }, void 0, false, {
                                     fileName: "[project]/packages/web/src/components/SearchForm.tsx",
-                                    lineNumber: 170,
-                                    columnNumber: 13
+                                    lineNumber: 171,
+                                    columnNumber: 15
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/packages/web/src/components/SearchForm.tsx",
-                            lineNumber: 166,
-                            columnNumber: 11
+                            lineNumber: 167,
+                            columnNumber: 13
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/packages/web/src/components/SearchForm.tsx",
-                    lineNumber: 137,
-                    columnNumber: 9
+                    lineNumber: 138,
+                    columnNumber: 11
+                }, this),
+                form.mode === 'multi-city' && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                    className: "space-y-3",
+                    children: [
+                        form.multiCityLegs.map((leg, idx)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "flex items-end gap-2",
+                                children: [
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                        className: "text-[10px] text-[var(--color-text-muted)] uppercase tracking-widest font-medium mb-3 w-6 text-right shrink-0",
+                                        children: idx + 1
+                                    }, void 0, false, {
+                                        fileName: "[project]/packages/web/src/components/SearchForm.tsx",
+                                        lineNumber: 189,
+                                        columnNumber: 17
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        className: "flex-1",
+                                        children: [
+                                            idx === 0 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
+                                                className: "block text-[10px] text-[var(--color-text-muted)] mb-1.5 uppercase tracking-widest font-medium",
+                                                children: "From"
+                                            }, void 0, false, {
+                                                fileName: "[project]/packages/web/src/components/SearchForm.tsx",
+                                                lineNumber: 194,
+                                                columnNumber: 21
+                                            }, this),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
+                                                type: "text",
+                                                className: "input-field text-base font-bold uppercase tracking-wider text-center",
+                                                placeholder: "DFW",
+                                                maxLength: 4,
+                                                value: leg.origin,
+                                                onChange: (e)=>{
+                                                    const legs = [
+                                                        ...form.multiCityLegs
+                                                    ];
+                                                    legs[idx] = {
+                                                        ...legs[idx],
+                                                        origin: e.target.value.toUpperCase()
+                                                    };
+                                                    setForm((prev)=>({
+                                                            ...prev,
+                                                            multiCityLegs: legs
+                                                        }));
+                                                },
+                                                required: true
+                                            }, void 0, false, {
+                                                fileName: "[project]/packages/web/src/components/SearchForm.tsx",
+                                                lineNumber: 196,
+                                                columnNumber: 19
+                                            }, this)
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "[project]/packages/web/src/components/SearchForm.tsx",
+                                        lineNumber: 192,
+                                        columnNumber: 17
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        className: "mb-1 text-[var(--color-text-muted)]",
+                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
+                                            width: "16",
+                                            height: "16",
+                                            viewBox: "0 0 24 24",
+                                            fill: "none",
+                                            stroke: "currentColor",
+                                            strokeWidth: "2",
+                                            strokeLinecap: "round",
+                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
+                                                d: "M5 12h14M12 5l7 7-7 7"
+                                            }, void 0, false, {
+                                                fileName: "[project]/packages/web/src/components/SearchForm.tsx",
+                                                lineNumber: 212,
+                                                columnNumber: 21
+                                            }, this)
+                                        }, void 0, false, {
+                                            fileName: "[project]/packages/web/src/components/SearchForm.tsx",
+                                            lineNumber: 211,
+                                            columnNumber: 19
+                                        }, this)
+                                    }, void 0, false, {
+                                        fileName: "[project]/packages/web/src/components/SearchForm.tsx",
+                                        lineNumber: 210,
+                                        columnNumber: 17
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        className: "flex-1",
+                                        children: [
+                                            idx === 0 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
+                                                className: "block text-[10px] text-[var(--color-text-muted)] mb-1.5 uppercase tracking-widest font-medium",
+                                                children: "To"
+                                            }, void 0, false, {
+                                                fileName: "[project]/packages/web/src/components/SearchForm.tsx",
+                                                lineNumber: 217,
+                                                columnNumber: 21
+                                            }, this),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
+                                                type: "text",
+                                                className: "input-field text-base font-bold uppercase tracking-wider text-center",
+                                                placeholder: "LHR",
+                                                maxLength: 4,
+                                                value: leg.destination,
+                                                onChange: (e)=>{
+                                                    const legs = [
+                                                        ...form.multiCityLegs
+                                                    ];
+                                                    legs[idx] = {
+                                                        ...legs[idx],
+                                                        destination: e.target.value.toUpperCase()
+                                                    };
+                                                    if (legs[idx + 1]) {
+                                                        legs[idx + 1] = {
+                                                            ...legs[idx + 1],
+                                                            origin: e.target.value.toUpperCase()
+                                                        };
+                                                    }
+                                                    setForm((prev)=>({
+                                                            ...prev,
+                                                            multiCityLegs: legs
+                                                        }));
+                                                },
+                                                required: true
+                                            }, void 0, false, {
+                                                fileName: "[project]/packages/web/src/components/SearchForm.tsx",
+                                                lineNumber: 219,
+                                                columnNumber: 19
+                                            }, this)
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "[project]/packages/web/src/components/SearchForm.tsx",
+                                        lineNumber: 215,
+                                        columnNumber: 17
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        className: "flex-1",
+                                        children: [
+                                            idx === 0 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
+                                                className: "block text-[10px] text-[var(--color-text-muted)] mb-1.5 uppercase tracking-widest font-medium",
+                                                children: "Date"
+                                            }, void 0, false, {
+                                                fileName: "[project]/packages/web/src/components/SearchForm.tsx",
+                                                lineNumber: 238,
+                                                columnNumber: 21
+                                            }, this),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
+                                                type: "date",
+                                                className: "input-field",
+                                                value: leg.date,
+                                                onChange: (e)=>{
+                                                    const legs = [
+                                                        ...form.multiCityLegs
+                                                    ];
+                                                    legs[idx] = {
+                                                        ...legs[idx],
+                                                        date: e.target.value
+                                                    };
+                                                    setForm((prev)=>({
+                                                            ...prev,
+                                                            multiCityLegs: legs
+                                                        }));
+                                                },
+                                                required: true
+                                            }, void 0, false, {
+                                                fileName: "[project]/packages/web/src/components/SearchForm.tsx",
+                                                lineNumber: 240,
+                                                columnNumber: 19
+                                            }, this)
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "[project]/packages/web/src/components/SearchForm.tsx",
+                                        lineNumber: 236,
+                                        columnNumber: 17
+                                    }, this),
+                                    form.multiCityLegs.length > 2 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                        type: "button",
+                                        onClick: ()=>{
+                                            const legs = form.multiCityLegs.filter((_, i)=>i !== idx);
+                                            setForm((prev)=>({
+                                                    ...prev,
+                                                    multiCityLegs: legs
+                                                }));
+                                        },
+                                        className: "mb-1 p-2 rounded-lg glass-subtle hover:bg-red-500/10 hover:text-red-400 transition-all text-[var(--color-text-muted)]",
+                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
+                                            width: "14",
+                                            height: "14",
+                                            viewBox: "0 0 24 24",
+                                            fill: "none",
+                                            stroke: "currentColor",
+                                            strokeWidth: "2",
+                                            strokeLinecap: "round",
+                                            children: [
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("line", {
+                                                    x1: "18",
+                                                    y1: "6",
+                                                    x2: "6",
+                                                    y2: "18"
+                                                }, void 0, false, {
+                                                    fileName: "[project]/packages/web/src/components/SearchForm.tsx",
+                                                    lineNumber: 262,
+                                                    columnNumber: 23
+                                                }, this),
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("line", {
+                                                    x1: "6",
+                                                    y1: "6",
+                                                    x2: "18",
+                                                    y2: "18"
+                                                }, void 0, false, {
+                                                    fileName: "[project]/packages/web/src/components/SearchForm.tsx",
+                                                    lineNumber: 262,
+                                                    columnNumber: 61
+                                                }, this)
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "[project]/packages/web/src/components/SearchForm.tsx",
+                                            lineNumber: 261,
+                                            columnNumber: 21
+                                        }, this)
+                                    }, void 0, false, {
+                                        fileName: "[project]/packages/web/src/components/SearchForm.tsx",
+                                        lineNumber: 253,
+                                        columnNumber: 19
+                                    }, this)
+                                ]
+                            }, idx, true, {
+                                fileName: "[project]/packages/web/src/components/SearchForm.tsx",
+                                lineNumber: 188,
+                                columnNumber: 15
+                            }, this)),
+                        form.multiCityLegs.length < 6 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                            type: "button",
+                            onClick: ()=>{
+                                const lastLeg = form.multiCityLegs[form.multiCityLegs.length - 1];
+                                const newDate = new Date(lastLeg.date);
+                                newDate.setDate(newDate.getDate() + 3);
+                                const legs = [
+                                    ...form.multiCityLegs,
+                                    {
+                                        origin: lastLeg.destination,
+                                        destination: '',
+                                        date: newDate.toISOString().split('T')[0]
+                                    }
+                                ];
+                                setForm((prev)=>({
+                                        ...prev,
+                                        multiCityLegs: legs
+                                    }));
+                            },
+                            className: "w-full py-2 rounded-lg border border-dashed border-white/10 text-xs text-[var(--color-text-muted)] hover:border-indigo-500/30 hover:text-indigo-400 transition-all",
+                            children: "+ Add flight"
+                        }, void 0, false, {
+                            fileName: "[project]/packages/web/src/components/SearchForm.tsx",
+                            lineNumber: 270,
+                            columnNumber: 15
+                        }, this)
+                    ]
+                }, void 0, true, {
+                    fileName: "[project]/packages/web/src/components/SearchForm.tsx",
+                    lineNumber: 186,
+                    columnNumber: 11
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                     className: "grid grid-cols-2 md:grid-cols-4 gap-3",
@@ -296,7 +555,7 @@ function SearchForm({ onSearch, loading, overrides }) {
                                             children: "Depart"
                                         }, void 0, false, {
                                             fileName: "[project]/packages/web/src/components/SearchForm.tsx",
-                                            lineNumber: 187,
+                                            lineNumber: 295,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -307,13 +566,13 @@ function SearchForm({ onSearch, loading, overrides }) {
                                             required: true
                                         }, void 0, false, {
                                             fileName: "[project]/packages/web/src/components/SearchForm.tsx",
-                                            lineNumber: 190,
+                                            lineNumber: 298,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/packages/web/src/components/SearchForm.tsx",
-                                    lineNumber: 186,
+                                    lineNumber: 294,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -323,7 +582,7 @@ function SearchForm({ onSearch, loading, overrides }) {
                                             children: "Return"
                                         }, void 0, false, {
                                             fileName: "[project]/packages/web/src/components/SearchForm.tsx",
-                                            lineNumber: 194,
+                                            lineNumber: 302,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -333,13 +592,13 @@ function SearchForm({ onSearch, loading, overrides }) {
                                             onChange: (e)=>update('returnDate', e.target.value)
                                         }, void 0, false, {
                                             fileName: "[project]/packages/web/src/components/SearchForm.tsx",
-                                            lineNumber: 197,
+                                            lineNumber: 305,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/packages/web/src/components/SearchForm.tsx",
-                                    lineNumber: 193,
+                                    lineNumber: 301,
                                     columnNumber: 15
                                 }, this)
                             ]
@@ -353,7 +612,7 @@ function SearchForm({ onSearch, loading, overrides }) {
                                             children: "Depart"
                                         }, void 0, false, {
                                             fileName: "[project]/packages/web/src/components/SearchForm.tsx",
-                                            lineNumber: 206,
+                                            lineNumber: 314,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -364,13 +623,13 @@ function SearchForm({ onSearch, loading, overrides }) {
                                             required: true
                                         }, void 0, false, {
                                             fileName: "[project]/packages/web/src/components/SearchForm.tsx",
-                                            lineNumber: 209,
+                                            lineNumber: 317,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/packages/web/src/components/SearchForm.tsx",
-                                    lineNumber: 205,
+                                    lineNumber: 313,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -380,7 +639,7 @@ function SearchForm({ onSearch, loading, overrides }) {
                                             children: "Return"
                                         }, void 0, false, {
                                             fileName: "[project]/packages/web/src/components/SearchForm.tsx",
-                                            lineNumber: 213,
+                                            lineNumber: 321,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -390,13 +649,13 @@ function SearchForm({ onSearch, loading, overrides }) {
                                             onChange: (e)=>update('returnDate', e.target.value)
                                         }, void 0, false, {
                                             fileName: "[project]/packages/web/src/components/SearchForm.tsx",
-                                            lineNumber: 216,
+                                            lineNumber: 324,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/packages/web/src/components/SearchForm.tsx",
-                                    lineNumber: 212,
+                                    lineNumber: 320,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -406,7 +665,7 @@ function SearchForm({ onSearch, loading, overrides }) {
                                             children: "± Days"
                                         }, void 0, false, {
                                             fileName: "[project]/packages/web/src/components/SearchForm.tsx",
-                                            lineNumber: 220,
+                                            lineNumber: 328,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -418,13 +677,13 @@ function SearchForm({ onSearch, loading, overrides }) {
                                             onChange: (e)=>update('flexDays', Number(e.target.value))
                                         }, void 0, false, {
                                             fileName: "[project]/packages/web/src/components/SearchForm.tsx",
-                                            lineNumber: 223,
+                                            lineNumber: 331,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/packages/web/src/components/SearchForm.tsx",
-                                    lineNumber: 219,
+                                    lineNumber: 327,
                                     columnNumber: 15
                                 }, this)
                             ]
@@ -437,7 +696,7 @@ function SearchForm({ onSearch, loading, overrides }) {
                                     children: "Month"
                                 }, void 0, false, {
                                     fileName: "[project]/packages/web/src/components/SearchForm.tsx",
-                                    lineNumber: 231,
+                                    lineNumber: 339,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -448,13 +707,13 @@ function SearchForm({ onSearch, loading, overrides }) {
                                     required: true
                                 }, void 0, false, {
                                     fileName: "[project]/packages/web/src/components/SearchForm.tsx",
-                                    lineNumber: 234,
+                                    lineNumber: 342,
                                     columnNumber: 15
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/packages/web/src/components/SearchForm.tsx",
-                            lineNumber: 230,
+                            lineNumber: 338,
                             columnNumber: 13
                         }, this),
                         form.mode === 'trip-length' && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Fragment"], {
@@ -466,7 +725,7 @@ function SearchForm({ onSearch, loading, overrides }) {
                                             children: "Month"
                                         }, void 0, false, {
                                             fileName: "[project]/packages/web/src/components/SearchForm.tsx",
-                                            lineNumber: 242,
+                                            lineNumber: 350,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -477,13 +736,13 @@ function SearchForm({ onSearch, loading, overrides }) {
                                             required: true
                                         }, void 0, false, {
                                             fileName: "[project]/packages/web/src/components/SearchForm.tsx",
-                                            lineNumber: 245,
+                                            lineNumber: 353,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/packages/web/src/components/SearchForm.tsx",
-                                    lineNumber: 241,
+                                    lineNumber: 349,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -493,7 +752,7 @@ function SearchForm({ onSearch, loading, overrides }) {
                                             children: "Min Days"
                                         }, void 0, false, {
                                             fileName: "[project]/packages/web/src/components/SearchForm.tsx",
-                                            lineNumber: 249,
+                                            lineNumber: 357,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -505,13 +764,13 @@ function SearchForm({ onSearch, loading, overrides }) {
                                             onChange: (e)=>update('tripLengthMin', Number(e.target.value))
                                         }, void 0, false, {
                                             fileName: "[project]/packages/web/src/components/SearchForm.tsx",
-                                            lineNumber: 252,
+                                            lineNumber: 360,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/packages/web/src/components/SearchForm.tsx",
-                                    lineNumber: 248,
+                                    lineNumber: 356,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -521,7 +780,7 @@ function SearchForm({ onSearch, loading, overrides }) {
                                             children: "Max Days"
                                         }, void 0, false, {
                                             fileName: "[project]/packages/web/src/components/SearchForm.tsx",
-                                            lineNumber: 256,
+                                            lineNumber: 364,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -533,13 +792,13 @@ function SearchForm({ onSearch, loading, overrides }) {
                                             onChange: (e)=>update('tripLengthMax', Number(e.target.value))
                                         }, void 0, false, {
                                             fileName: "[project]/packages/web/src/components/SearchForm.tsx",
-                                            lineNumber: 259,
+                                            lineNumber: 367,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/packages/web/src/components/SearchForm.tsx",
-                                    lineNumber: 255,
+                                    lineNumber: 363,
                                     columnNumber: 15
                                 }, this)
                             ]
@@ -551,7 +810,7 @@ function SearchForm({ onSearch, loading, overrides }) {
                                     children: "Passengers"
                                 }, void 0, false, {
                                     fileName: "[project]/packages/web/src/components/SearchForm.tsx",
-                                    lineNumber: 266,
+                                    lineNumber: 374,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -563,13 +822,13 @@ function SearchForm({ onSearch, loading, overrides }) {
                                     onChange: (e)=>update('passengers', Number(e.target.value))
                                 }, void 0, false, {
                                     fileName: "[project]/packages/web/src/components/SearchForm.tsx",
-                                    lineNumber: 269,
+                                    lineNumber: 377,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/packages/web/src/components/SearchForm.tsx",
-                            lineNumber: 265,
+                            lineNumber: 373,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -579,7 +838,7 @@ function SearchForm({ onSearch, loading, overrides }) {
                                     children: "Cabin"
                                 }, void 0, false, {
                                     fileName: "[project]/packages/web/src/components/SearchForm.tsx",
-                                    lineNumber: 273,
+                                    lineNumber: 381,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("select", {
@@ -591,24 +850,24 @@ function SearchForm({ onSearch, loading, overrides }) {
                                             children: c.label
                                         }, c.value, false, {
                                             fileName: "[project]/packages/web/src/components/SearchForm.tsx",
-                                            lineNumber: 279,
+                                            lineNumber: 387,
                                             columnNumber: 17
                                         }, this))
                                 }, void 0, false, {
                                     fileName: "[project]/packages/web/src/components/SearchForm.tsx",
-                                    lineNumber: 276,
+                                    lineNumber: 384,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/packages/web/src/components/SearchForm.tsx",
-                            lineNumber: 272,
+                            lineNumber: 380,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/packages/web/src/components/SearchForm.tsx",
-                    lineNumber: 183,
+                    lineNumber: 291,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -627,34 +886,34 @@ function SearchForm({ onSearch, loading, overrides }) {
                                             className: "sr-only peer"
                                         }, void 0, false, {
                                             fileName: "[project]/packages/web/src/components/SearchForm.tsx",
-                                            lineNumber: 289,
+                                            lineNumber: 397,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                             className: "w-9 h-5 rounded-full bg-white/[0.06] border border-white/10 peer-checked:bg-indigo-500/30 peer-checked:border-indigo-500/50 transition-all"
                                         }, void 0, false, {
                                             fileName: "[project]/packages/web/src/components/SearchForm.tsx",
-                                            lineNumber: 295,
+                                            lineNumber: 403,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                             className: "absolute top-0.5 left-0.5 w-4 h-4 rounded-full bg-white/30 peer-checked:bg-indigo-400 peer-checked:translate-x-4 transition-all"
                                         }, void 0, false, {
                                             fileName: "[project]/packages/web/src/components/SearchForm.tsx",
-                                            lineNumber: 296,
+                                            lineNumber: 404,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/packages/web/src/components/SearchForm.tsx",
-                                    lineNumber: 288,
+                                    lineNumber: 396,
                                     columnNumber: 13
                                 }, this),
                                 "Nonstop only"
                             ]
                         }, void 0, true, {
                             fileName: "[project]/packages/web/src/components/SearchForm.tsx",
-                            lineNumber: 287,
+                            lineNumber: 395,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -670,27 +929,27 @@ function SearchForm({ onSearch, loading, overrides }) {
                                                 className: "dot w-1.5 h-1.5 bg-white rounded-full"
                                             }, void 0, false, {
                                                 fileName: "[project]/packages/web/src/components/SearchForm.tsx",
-                                                lineNumber: 305,
+                                                lineNumber: 413,
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                 className: "dot w-1.5 h-1.5 bg-white rounded-full"
                                             }, void 0, false, {
                                                 fileName: "[project]/packages/web/src/components/SearchForm.tsx",
-                                                lineNumber: 306,
+                                                lineNumber: 414,
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                 className: "dot w-1.5 h-1.5 bg-white rounded-full"
                                             }, void 0, false, {
                                                 fileName: "[project]/packages/web/src/components/SearchForm.tsx",
-                                                lineNumber: 307,
+                                                lineNumber: 415,
                                                 columnNumber: 19
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/packages/web/src/components/SearchForm.tsx",
-                                        lineNumber: 304,
+                                        lineNumber: 412,
                                         columnNumber: 17
                                     }, this),
                                     "Searching"
@@ -712,20 +971,20 @@ function SearchForm({ onSearch, loading, overrides }) {
                                                 r: "8"
                                             }, void 0, false, {
                                                 fileName: "[project]/packages/web/src/components/SearchForm.tsx",
-                                                lineNumber: 314,
+                                                lineNumber: 422,
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
                                                 d: "M21 21l-4.35-4.35"
                                             }, void 0, false, {
                                                 fileName: "[project]/packages/web/src/components/SearchForm.tsx",
-                                                lineNumber: 315,
+                                                lineNumber: 423,
                                                 columnNumber: 19
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/packages/web/src/components/SearchForm.tsx",
-                                        lineNumber: 313,
+                                        lineNumber: 421,
                                         columnNumber: 17
                                     }, this),
                                     "Search Flights"
@@ -733,13 +992,13 @@ function SearchForm({ onSearch, loading, overrides }) {
                             }, void 0, true)
                         }, void 0, false, {
                             fileName: "[project]/packages/web/src/components/SearchForm.tsx",
-                            lineNumber: 301,
+                            lineNumber: 409,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/packages/web/src/components/SearchForm.tsx",
-                    lineNumber: 286,
+                    lineNumber: 394,
                     columnNumber: 9
                 }, this)
             ]

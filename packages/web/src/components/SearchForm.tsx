@@ -133,51 +133,159 @@ export default function SearchForm({ onSearch, loading, overrides }: Props) {
           ))}
         </div>
 
-        {/* Airport inputs */}
-        <div className="flex items-end gap-2">
-          <div className="flex-1">
-            <label className="block text-[10px] text-[var(--color-text-muted)] mb-1.5 uppercase tracking-widest font-medium">
-              From
-            </label>
-            <input
-              type="text"
-              className="input-field text-xl font-bold uppercase tracking-wider text-center"
-              placeholder="DFW"
-              maxLength={4}
-              value={form.origin}
-              onChange={(e) => update('origin', e.target.value.toUpperCase())}
-              required
-            />
-          </div>
+        {/* Airport inputs — hidden for multi-city */}
+        {form.mode !== 'multi-city' && (
+          <div className="flex items-end gap-2">
+            <div className="flex-1">
+              <label className="block text-[10px] text-[var(--color-text-muted)] mb-1.5 uppercase tracking-widest font-medium">
+                From
+              </label>
+              <input
+                type="text"
+                className="input-field text-xl font-bold uppercase tracking-wider text-center"
+                placeholder="DFW"
+                maxLength={4}
+                value={form.origin}
+                onChange={(e) => update('origin', e.target.value.toUpperCase())}
+                required
+              />
+            </div>
 
-          <button
-            type="button"
-            onClick={swapAirports}
-            className="mb-1 p-2.5 rounded-xl glass-subtle hover:bg-[var(--color-glass-hover)] transition-all hover:scale-105 active:scale-95"
-            title="Swap airports"
-          >
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
-              <path d="M7 16l-4-4 4-4" />
-              <path d="M17 8l4 4-4 4" />
-              <line x1="3" y1="12" x2="21" y2="12" />
-            </svg>
-          </button>
+            <button
+              type="button"
+              onClick={swapAirports}
+              className="mb-1 p-2.5 rounded-xl glass-subtle hover:bg-[var(--color-glass-hover)] transition-all hover:scale-105 active:scale-95"
+              title="Swap airports"
+            >
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
+                <path d="M7 16l-4-4 4-4" />
+                <path d="M17 8l4 4-4 4" />
+                <line x1="3" y1="12" x2="21" y2="12" />
+              </svg>
+            </button>
 
-          <div className="flex-1">
-            <label className="block text-[10px] text-[var(--color-text-muted)] mb-1.5 uppercase tracking-widest font-medium">
-              To
-            </label>
-            <input
-              type="text"
-              className="input-field text-xl font-bold uppercase tracking-wider text-center"
-              placeholder="LHR"
-              maxLength={4}
-              value={form.destination}
-              onChange={(e) => update('destination', e.target.value.toUpperCase())}
-              required
-            />
+            <div className="flex-1">
+              <label className="block text-[10px] text-[var(--color-text-muted)] mb-1.5 uppercase tracking-widest font-medium">
+                To
+              </label>
+              <input
+                type="text"
+                className="input-field text-xl font-bold uppercase tracking-wider text-center"
+                placeholder="LHR"
+                maxLength={4}
+                value={form.destination}
+                onChange={(e) => update('destination', e.target.value.toUpperCase())}
+                required
+              />
+            </div>
           </div>
-        </div>
+        )}
+
+        {/* Multi-City Legs */}
+        {form.mode === 'multi-city' && (
+          <div className="space-y-3">
+            {form.multiCityLegs.map((leg, idx) => (
+              <div key={idx} className="flex items-end gap-2">
+                <span className="text-[10px] text-[var(--color-text-muted)] uppercase tracking-widest font-medium mb-3 w-6 text-right shrink-0">
+                  {idx + 1}
+                </span>
+                <div className="flex-1">
+                  {idx === 0 && (
+                    <label className="block text-[10px] text-[var(--color-text-muted)] mb-1.5 uppercase tracking-widest font-medium">From</label>
+                  )}
+                  <input
+                    type="text"
+                    className="input-field text-base font-bold uppercase tracking-wider text-center"
+                    placeholder="DFW"
+                    maxLength={4}
+                    value={leg.origin}
+                    onChange={(e) => {
+                      const legs = [...form.multiCityLegs];
+                      legs[idx] = { ...legs[idx], origin: e.target.value.toUpperCase() };
+                      setForm((prev) => ({ ...prev, multiCityLegs: legs }));
+                    }}
+                    required
+                  />
+                </div>
+                <div className="mb-1 text-[var(--color-text-muted)]">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
+                    <path d="M5 12h14M12 5l7 7-7 7" />
+                  </svg>
+                </div>
+                <div className="flex-1">
+                  {idx === 0 && (
+                    <label className="block text-[10px] text-[var(--color-text-muted)] mb-1.5 uppercase tracking-widest font-medium">To</label>
+                  )}
+                  <input
+                    type="text"
+                    className="input-field text-base font-bold uppercase tracking-wider text-center"
+                    placeholder="LHR"
+                    maxLength={4}
+                    value={leg.destination}
+                    onChange={(e) => {
+                      const legs = [...form.multiCityLegs];
+                      legs[idx] = { ...legs[idx], destination: e.target.value.toUpperCase() };
+                      if (legs[idx + 1]) {
+                        legs[idx + 1] = { ...legs[idx + 1], origin: e.target.value.toUpperCase() };
+                      }
+                      setForm((prev) => ({ ...prev, multiCityLegs: legs }));
+                    }}
+                    required
+                  />
+                </div>
+                <div className="flex-1">
+                  {idx === 0 && (
+                    <label className="block text-[10px] text-[var(--color-text-muted)] mb-1.5 uppercase tracking-widest font-medium">Date</label>
+                  )}
+                  <input
+                    type="date"
+                    className="input-field"
+                    value={leg.date}
+                    onChange={(e) => {
+                      const legs = [...form.multiCityLegs];
+                      legs[idx] = { ...legs[idx], date: e.target.value };
+                      setForm((prev) => ({ ...prev, multiCityLegs: legs }));
+                    }}
+                    required
+                  />
+                </div>
+                {form.multiCityLegs.length > 2 && (
+                  <button
+                    type="button"
+                    onClick={() => {
+                      const legs = form.multiCityLegs.filter((_, i) => i !== idx);
+                      setForm((prev) => ({ ...prev, multiCityLegs: legs }));
+                    }}
+                    className="mb-1 p-2 rounded-lg glass-subtle hover:bg-red-500/10 hover:text-red-400 transition-all text-[var(--color-text-muted)]"
+                  >
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
+                      <line x1="18" y1="6" x2="6" y2="18" /><line x1="6" y1="6" x2="18" y2="18" />
+                    </svg>
+                  </button>
+                )}
+              </div>
+            ))}
+
+            {form.multiCityLegs.length < 6 && (
+              <button
+                type="button"
+                onClick={() => {
+                  const lastLeg = form.multiCityLegs[form.multiCityLegs.length - 1];
+                  const newDate = new Date(lastLeg.date);
+                  newDate.setDate(newDate.getDate() + 3);
+                  const legs = [
+                    ...form.multiCityLegs,
+                    { origin: lastLeg.destination, destination: '', date: newDate.toISOString().split('T')[0] },
+                  ];
+                  setForm((prev) => ({ ...prev, multiCityLegs: legs }));
+                }}
+                className="w-full py-2 rounded-lg border border-dashed border-white/10 text-xs text-[var(--color-text-muted)] hover:border-indigo-500/30 hover:text-indigo-400 transition-all"
+              >
+                + Add flight
+              </button>
+            )}
+          </div>
+        )}
 
         {/* Date fields */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
