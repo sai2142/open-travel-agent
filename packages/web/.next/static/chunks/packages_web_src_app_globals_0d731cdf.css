@@ -542,6 +542,10 @@
     position: relative;
   }
 
+  .static {
+    position: static;
+  }
+
   .-inset-0\.5 {
     inset: calc(var(--spacing) * -.5);
   }
@@ -595,6 +599,10 @@
     margin-top: calc(var(--spacing) * 5);
   }
 
+  .mt-12 {
+    margin-top: calc(var(--spacing) * 12);
+  }
+
   .mt-auto {
     margin-top: auto;
   }
@@ -609,6 +617,10 @@
 
   .mb-1\.5 {
     margin-bottom: calc(var(--spacing) * 1.5);
+  }
+
+  .mb-2 {
+    margin-bottom: calc(var(--spacing) * 2);
   }
 
   .mb-4 {
