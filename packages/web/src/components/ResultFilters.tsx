@@ -1,0 +1,337 @@
+'use client';
+
+import { useState, useMemo } from 'react';
+
+export type SortBy = 'score' | 'price' | 'duration' | 'stops';
+
+export interface FilterState {
+  sortBy: SortBy;
+  maxStops: number | null;
+  maxPrice: number | null;
+  maxDuration: number | null;
+  airlines: Set<string>;
+  directOnly: boolean;
+  departTimeMin: number;
+  departTimeMax: number;
+}
+
+interface ScoredOffer {
+  offer: {
+    outbound: {
+      segments: Array<{ carrier: string; carrierName?: string; departure: { at: string } }>;
+      duration: string;
+      stops: number;
+    };
+    inbound?: { duration: string; stops: number };
+    price: { total: number };
+  };
+  score: number;
+}
+
+interface Props {
+  results: ScoredOffer[];
+  filters: FilterState;
+  onChange: (filters: FilterState) => void;
+  resultCount: number;
+}
+
+const sortOptions: { value: SortBy; label: string; description: string }[] = [
+  { value: 'score', label: 'Best', description: 'Price + duration + stops' },
+  { value: 'price', label: 'Cheapest', description: 'Lowest total price' },
+  { value: 'duration', label: 'Fastest', description: 'Shortest travel time' },
+  { value: 'stops', label: 'Fewest stops', description: 'Least connections' },
+];
+
+function parseDurationMinutes(iso: string): number {
+  const match = iso.match(/PT(?:(\d+)H)?(?:(\d+)M)?/);
+  if (!match) return 0;
+  return (parseInt(match[1] || '0') * 60) + parseInt(match[2] || '0');
+}
+
+function formatHour(h: number): string {
+  if (h === 0) return '12 AM';
+  if (h === 12) return '12 PM';
+  if (h < 12) return `${h} AM`;
+  return `${h - 12} PM`;
+}
+
+export function applyFilters(results: ScoredOffer[], filters: FilterState): ScoredOffer[] {
+  let filtered = results.filter((r) => {
+    if (filters.directOnly && r.offer.outbound.stops > 0) return false;
+    if (filters.maxStops !== null && r.offer.outbound.stops > filters.maxStops) return false;
+    if (filters.maxPrice !== null && r.offer.price.total > filters.maxPrice) return false;
+
+    if (filters.maxDuration !== null) {
+      const mins = parseDurationMinutes(r.offer.outbound.duration);
+      if (mins > filters.maxDuration * 60) return false;
+    }
+
+    if (filters.airlines.size > 0) {
+      const carrier = r.offer.outbound.segments[0]?.carrier;
+      if (!filters.airlines.has(carrier)) return false;
+    }
+
+    const departHour = new Date(r.offer.outbound.segments[0].departure.at).getHours();
+    if (departHour < filters.departTimeMin || departHour > filters.departTimeMax) return false;
+
+    return true;
+  });
+
+  const sorted = [...filtered];
+  switch (filters.sortBy) {
+    case 'price':
+      sorted.sort((a, b) => a.offer.price.total - b.offer.price.total);
+      break;
+    case 'duration':
+      sorted.sort((a, b) =>
+        parseDurationMinutes(a.offer.outbound.duration) - parseDurationMinutes(b.offer.outbound.duration)
+      );
+      break;
+    case 'stops':
+      sorted.sort((a, b) => a.offer.outbound.stops - b.offer.outbound.stops);
+      break;
+    case 'score':
+    default:
+      sorted.sort((a, b) => b.score - a.score);
+      break;
+  }
+
+  return sorted;
+}
+
+export function getDefaultFilters(): FilterState {
+  return {
+    sortBy: 'score',
+    maxStops: null,
+    maxPrice: null,
+    maxDuration: null,
+    airlines: new Set(),
+    directOnly: false,
+    departTimeMin: 0,
+    departTimeMax: 23,
+  };
+}
+
+export default function ResultFilters({ results, filters, onChange, resultCount }: Props) {
+  const [expanded, setExpanded] = useState(false);
+
+  const availableAirlines = useMemo(() => {
+    const map = new Map<string, string>();
+    results.forEach((r) => {
+      const seg = r.offer.outbound.segments[0];
+      if (seg) map.set(seg.carrier, seg.carrierName || seg.carrier);
+    });
+    return Array.from(map.entries()).sort((a, b) => a[1].localeCompare(b[1]));
+  }, [results]);
+
+  const priceRange = useMemo(() => {
+    if (results.length === 0) return { min: 0, max: 1000 };
+    const prices = results.map((r) => r.offer.price.total);
+    return { min: Math.floor(Math.min(...prices)), max: Math.ceil(Math.max(...prices)) };
+  }, [results]);
+
+  const activeFilterCount = [
+    filters.maxStops !== null,
+    filters.maxPrice !== null,
+    filters.maxDuration !== null,
+    filters.airlines.size > 0,
+    filters.directOnly,
+    filters.departTimeMin > 0 || filters.departTimeMax < 23,
+  ].filter(Boolean).length;
+
+  const update = (patch: Partial<FilterState>) => onChange({ ...filters, ...patch });
+
+  return (
+    <div className="space-y-3 fade-in">
+      {/* Sort bar */}
+      <div className="flex items-center gap-2 flex-wrap">
+        <span className="text-[10px] text-[var(--color-text-muted)] uppercase tracking-widest">Sort</span>
+        <div className="flex gap-1 p-0.5 glass-subtle rounded-lg">
+          {sortOptions.map((opt) => (
+            <button
+              key={opt.value}
+              onClick={() => update({ sortBy: opt.value })}
+              title={opt.description}
+              className={`px-3 py-1.5 rounded-md text-xs font-medium transition-all ${
+                filters.sortBy === opt.value
+                  ? 'bg-white/[0.08] text-white'
+                  : 'text-[var(--color-text-muted)] hover:text-[var(--color-text-secondary)]'
+              }`}
+            >
+              {opt.label}
+            </button>
+          ))}
+        </div>
+
+        <div className="flex-1" />
+
+        <button
+          onClick={() => setExpanded(!expanded)}
+          className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium transition-all ${
+            expanded || activeFilterCount > 0
+              ? 'glass text-white'
+              : 'glass-subtle text-[var(--color-text-muted)] hover:text-[var(--color-text-secondary)]'
+          }`}
+        >
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
+            <line x1="4" y1="6" x2="20" y2="6" />
+            <line x1="8" y1="12" x2="20" y2="12" />
+            <line x1="12" y1="18" x2="20" y2="18" />
+          </svg>
+          Filters
+          {activeFilterCount > 0 && (
+            <span className="w-4 h-4 rounded-full bg-indigo-500 text-white text-[10px] flex items-center justify-center">
+              {activeFilterCount}
+            </span>
+          )}
+        </button>
+
+        <span className="text-[11px] text-[var(--color-text-muted)]">
+          {resultCount} result{resultCount !== 1 ? 's' : ''}
+        </span>
+      </div>
+
+      {/* Filter panel */}
+      {expanded && (
+        <div className="glass p-4 space-y-4 fade-in">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            {/* Stops */}
+            <div>
+              <label className="block text-[10px] text-[var(--color-text-muted)] uppercase tracking-widest mb-2">
+                Max Stops
+              </label>
+              <div className="flex gap-1">
+                {[
+                  { value: null, label: 'Any' },
+                  { value: 0, label: '0' },
+                  { value: 1, label: '1' },
+                  { value: 2, label: '2' },
+                ].map((opt) => (
+                  <button
+                    key={String(opt.value)}
+                    onClick={() => update({ maxStops: opt.value })}
+                    className={`flex-1 py-1.5 rounded-lg text-xs font-medium transition-all ${
+                      filters.maxStops === opt.value
+                        ? 'bg-white/[0.08] text-white'
+                        : 'bg-white/[0.02] text-[var(--color-text-muted)] hover:bg-white/[0.04]'
+                    }`}
+                  >
+                    {opt.label}
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            {/* Max Price */}
+            <div>
+              <label className="block text-[10px] text-[var(--color-text-muted)] uppercase tracking-widest mb-2">
+                Max Price {filters.maxPrice !== null && `($${filters.maxPrice})`}
+              </label>
+              <input
+                type="range"
+                min={priceRange.min}
+                max={priceRange.max}
+                step={10}
+                value={filters.maxPrice ?? priceRange.max}
+                onChange={(e) => {
+                  const val = Number(e.target.value);
+                  update({ maxPrice: val >= priceRange.max ? null : val });
+                }}
+                className="w-full accent-indigo-500"
+              />
+            </div>
+
+            {/* Max Duration */}
+            <div>
+              <label className="block text-[10px] text-[var(--color-text-muted)] uppercase tracking-widest mb-2">
+                Max Duration {filters.maxDuration !== null && `(${filters.maxDuration}h)`}
+              </label>
+              <input
+                type="range"
+                min={2}
+                max={24}
+                step={1}
+                value={filters.maxDuration ?? 24}
+                onChange={(e) => {
+                  const val = Number(e.target.value);
+                  update({ maxDuration: val >= 24 ? null : val });
+                }}
+                className="w-full accent-indigo-500"
+              />
+            </div>
+
+            {/* Departure Time */}
+            <div>
+              <label className="block text-[10px] text-[var(--color-text-muted)] uppercase tracking-widest mb-2">
+                Depart {formatHour(filters.departTimeMin)}–{formatHour(filters.departTimeMax)}
+              </label>
+              <div className="flex gap-1 items-center">
+                <input
+                  type="range"
+                  min={0}
+                  max={23}
+                  value={filters.departTimeMin}
+                  onChange={(e) => update({ departTimeMin: Number(e.target.value) })}
+                  className="w-full accent-indigo-500"
+                />
+                <input
+                  type="range"
+                  min={0}
+                  max={23}
+                  value={filters.departTimeMax}
+                  onChange={(e) => update({ departTimeMax: Number(e.target.value) })}
+                  className="w-full accent-indigo-500"
+                />
+              </div>
+            </div>
+          </div>
+
+          {/* Airlines */}
+          {availableAirlines.length > 1 && (
+            <div>
+              <label className="block text-[10px] text-[var(--color-text-muted)] uppercase tracking-widest mb-2">
+                Airlines
+              </label>
+              <div className="flex flex-wrap gap-1.5">
+                {availableAirlines.map(([code, name]) => {
+                  const active = filters.airlines.size === 0 || filters.airlines.has(code);
+                  return (
+                    <button
+                      key={code}
+                      onClick={() => {
+                        const next = new Set(filters.airlines);
+                        if (next.has(code)) {
+                          next.delete(code);
+                        } else {
+                          next.add(code);
+                        }
+                        update({ airlines: next });
+                      }}
+                      className={`px-2.5 py-1 rounded-lg text-[11px] font-medium transition-all ${
+                        active
+                          ? 'bg-white/[0.06] text-white border border-white/10'
+                          : 'bg-white/[0.02] text-[var(--color-text-muted)] border border-transparent'
+                      }`}
+                    >
+                      {name}
+                    </button>
+                  );
+                })}
+              </div>
+            </div>
+          )}
+
+          {/* Reset */}
+          {activeFilterCount > 0 && (
+            <button
+              onClick={() => onChange(getDefaultFilters())}
+              className="text-xs text-indigo-400 hover:text-indigo-300 transition-colors"
+            >
+              Reset all filters
+            </button>
+          )}
+        </div>
+      )}
+    </div>
+  );
+}

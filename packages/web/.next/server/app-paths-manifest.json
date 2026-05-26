@@ -1,3 +1,7 @@
 {
+  "/_not-found/page": "app/_not-found/page.js",
+  "/api/parse/route": "app/api/parse/route.js",
+  "/api/search/route": "app/api/search/route.js",
+  "/api/search/flex/route": "app/api/search/flex/route.js",
   "/page": "app/page.js"
 }
