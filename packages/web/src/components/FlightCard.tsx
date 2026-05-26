@@ -90,6 +90,15 @@ function stopsColor(stops: number): string {
   return 'text-[var(--color-danger)]';
 }
 
+function layoverDuration(prevArrival: string, nextDeparture: string): string {
+  const ms = new Date(nextDeparture).getTime() - new Date(prevArrival).getTime();
+  const mins = Math.round(ms / 60000);
+  const h = Math.floor(mins / 60);
+  const m = mins % 60;
+  if (h === 0) return `${m}m`;
+  return `${h}h ${m}m`;
+}
+
 function ItineraryRow({ itinerary, label }: { itinerary: Itinerary; label: string }) {
   const first = itinerary.segments[0];
   const last = itinerary.segments[itinerary.segments.length - 1];
