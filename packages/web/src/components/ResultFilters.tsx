@@ -239,8 +239,8 @@ export default function ResultFilters({ results, filters, onChange, resultCount 
                 }}
                 className="w-full accent-indigo-500 mb-2"
               />
-              <div className="flex items-center gap-1.5 bg-white/[0.03] border border-white/[0.07] rounded-lg px-3 py-2">
-                <span className="text-[13px] text-[var(--color-text-muted)] font-medium">$</span>
+              <div className="flex items-center gap-1.5 bg-white/[0.03] border border-white/[0.07] rounded-lg px-3 py-2.5">
+                <span className="text-sm text-[var(--color-text-muted)] font-medium">$</span>
                 <input
                   type="number"
                   min={0}
@@ -251,7 +251,7 @@ export default function ResultFilters({ results, filters, onChange, resultCount 
                     const val = e.target.value ? Number(e.target.value) : null;
                     update({ maxPrice: val });
                   }}
-                  className="bg-transparent text-[13px] text-[var(--color-text-primary)] outline-none w-full placeholder:text-[var(--color-text-muted)]"
+                  className="bg-transparent text-sm text-[var(--color-text-primary)] outline-none w-full placeholder:text-[var(--color-text-muted)]"
                 />
               </div>
             </div>
@@ -273,7 +273,8 @@ export default function ResultFilters({ results, filters, onChange, resultCount 
                 }}
                 className="w-full accent-indigo-500 mb-2"
               />
-              <div className="flex items-center gap-1.5 bg-white/[0.03] border border-white/[0.07] rounded-lg px-3 py-2">
+              <div className="flex items-center gap-1.5 bg-white/[0.03] border border-white/[0.07] rounded-lg px-3 py-2.5">
+                <span className="text-sm text-[var(--color-text-muted)] font-medium">hr</span>
                 <input
                   type="number"
                   min={1}
@@ -284,9 +285,8 @@ export default function ResultFilters({ results, filters, onChange, resultCount 
                     const val = e.target.value ? Number(e.target.value) : null;
                     update({ maxDuration: val });
                   }}
-                  className="bg-transparent text-[13px] text-[var(--color-text-primary)] outline-none w-full placeholder:text-[var(--color-text-muted)]"
+                  className="bg-transparent text-sm text-[var(--color-text-primary)] outline-none w-full placeholder:text-[var(--color-text-muted)]"
                 />
-                <span className="text-[13px] text-[var(--color-text-muted)] font-medium shrink-0">hours</span>
               </div>
             </div>
 
@@ -295,24 +295,29 @@ export default function ResultFilters({ results, filters, onChange, resultCount 
               <label className="block text-[10px] text-[var(--color-text-muted)] uppercase tracking-widest mb-2.5">
                 Departure Window
               </label>
-              <div className="flex items-center gap-2 mt-1">
-                <div className="flex-1 bg-white/[0.03] border border-white/[0.07] rounded-lg px-3 py-2">
+              <div className="text-center text-sm font-medium text-[var(--color-text-primary)] mb-2">
+                {formatHour(filters.departTimeMin)} — {formatHour(filters.departTimeMax)}
+              </div>
+              <div className="flex items-center gap-3">
+                <div className="flex-1 bg-white/[0.03] border border-white/[0.07] rounded-lg px-3 py-2.5">
                   <select
                     value={filters.departTimeMin}
                     onChange={(e) => update({ departTimeMin: Number(e.target.value) })}
-                    className="bg-transparent text-[13px] text-[var(--color-text-primary)] outline-none w-full cursor-pointer"
+                    className="bg-transparent text-sm text-[var(--color-text-primary)] outline-none w-full cursor-pointer"
+                    style={{ colorScheme: 'dark' }}
                   >
                     {Array.from({ length: 24 }, (_, i) => (
                       <option key={i} value={i}>{formatHour(i)}</option>
                     ))}
                   </select>
                 </div>
-                <span className="text-[13px] text-[var(--color-text-muted)] font-medium">to</span>
-                <div className="flex-1 bg-white/[0.03] border border-white/[0.07] rounded-lg px-3 py-2">
+                <span className="text-sm text-[var(--color-text-muted)] font-medium">to</span>
+                <div className="flex-1 bg-white/[0.03] border border-white/[0.07] rounded-lg px-3 py-2.5">
                   <select
                     value={filters.departTimeMax}
                     onChange={(e) => update({ departTimeMax: Number(e.target.value) })}
-                    className="bg-transparent text-[13px] text-[var(--color-text-primary)] outline-none w-full cursor-pointer"
+                    className="bg-transparent text-sm text-[var(--color-text-primary)] outline-none w-full cursor-pointer"
+                    style={{ colorScheme: 'dark' }}
                   >
                     {Array.from({ length: 24 }, (_, i) => (
                       <option key={i} value={i}>{formatHour(i)}</option>
