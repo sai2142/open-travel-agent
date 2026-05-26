@@ -10,9 +10,12 @@
   "scripts": {
     "dev": "tsx src/cli.ts",
     "start": "tsx src/cli.ts",
+    "build": "tsc -b packages/shared-types packages/agent-core packages/provider-mock packages/provider-duffel",
+    "clean": "rimraf packages/*/dist",
     "test": "vitest run",
     "test:watch": "vitest",
-    "typecheck": "tsc -b"
+    "typecheck": "tsc -b",
+    "prepublishOnly": "npm run build"
   },
   "workspaces": [
     "packages/*"
