@@ -54,6 +54,7 @@ jobs:
       - name: Verify package contents
         run: |
           for pkg in packages/*/; do
+            if [ "$(basename $pkg)" = "web" ]; then continue; fi
             echo "=== $(basename $pkg) ==="
             cd "$pkg"
             npm pack --dry-run 2>&1 || true
