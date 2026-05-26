@@ -134,6 +134,30 @@ export default function Home() {
     window.history.replaceState(null, '', encodeSearchToUrl(form));
 
     try {
+      if (form.mode === 'multi-city') {
+        const legResults = await Promise.all(
+          form.multiCityLegs.map(async (leg) => {
+            const res = await fetch('/api/search', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({
+                origin: leg.origin,
+                destination: leg.destination,
+                departureDate: leg.date,
+                passengers: form.passengers,
+                cabin: form.cabin,
+                directOnly: form.directOnly,
+              }),
+            });
+            const data = await res.json();
+            if (data.error) throw new Error(`${leg.origin}-${leg.destination}: ${data.error}`);
+            return { leg, offers: data.offers, totalOffers: data.totalOffers, provider: data.provider };
+          })
+        );
+        setView({ type: 'multi-city-results', data: { legs: legResults } });
+        return;
+      }
+
       if (form.mode === 'exact') {
         const res = await fetch('/api/search', {
           method: 'POST',
