@@ -1,9 +1,12 @@
 node_modules/
 dist/
 .env
+.env.local
 *.db
 *.sqlite
 vault.enc
+vault.enc.salt
+.travel-agent/
 .DS_Store
 *.log
 coverage/
