@@ -132,9 +132,32 @@ export default function Home() {
         </div>
       </header>
 
+      {/* Natural Language Bar */}
+      {isIdle && (
+        <section className="px-4 pb-2 fade-in" style={{ animationDelay: '100ms' }}>
+          <NaturalLanguageBar onParsed={handleNlParsed} />
+        </section>
+      )}
+
+      {/* Divider */}
+      {isIdle && (
+        <div className="flex items-center gap-3 max-w-3xl mx-auto px-8 py-3">
+          <div className="flex-1 h-px bg-gradient-to-r from-transparent to-white/[0.06]" />
+          <span className="text-[10px] text-[var(--color-text-muted)] uppercase tracking-widest">or use the form</span>
+          <div className="flex-1 h-px bg-gradient-to-l from-transparent to-white/[0.06]" />
+        </div>
+      )}
+
+      {/* NL Applied indicator */}
+      {nlApplied && (
+        <div className="text-center text-xs text-[var(--color-success)] fade-in pb-2">
+          Fields updated from your query
+        </div>
+      )}
+
       {/* Search Form */}
-      <section className={`px-4 transition-all duration-500 ${isIdle ? 'py-10' : 'py-4'}`}>
-        <SearchForm onSearch={handleSearch} loading={view.type === 'loading'} />
+      <section className={`px-4 transition-all duration-500 ${isIdle ? 'py-2' : 'py-4'}`}>
+        <SearchForm onSearch={handleSearch} loading={view.type === 'loading'} overrides={formOverrides} />
       </section>
 
       {/* Feature Pills — only on idle */}
