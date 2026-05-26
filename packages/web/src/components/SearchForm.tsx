@@ -22,6 +22,7 @@ export interface SearchFormData {
 interface Props {
   onSearch: (data: SearchFormData) => void;
   loading: boolean;
+  overrides?: Partial<SearchFormData> | null;
 }
 
 const cabinOptions = [
