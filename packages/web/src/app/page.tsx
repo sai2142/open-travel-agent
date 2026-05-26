@@ -89,12 +89,32 @@ export default function Home() {
   const [formOverrides, setFormOverrides] = useState<Partial<SearchFormData> | null>(null);
   const [nlApplied, setNlApplied] = useState(false);
   const [filters, setFilters] = useState<FilterState>(getDefaultFilters);
+  const [lastSearchForm, setLastSearchForm] = useState<SearchFormData | null>(null);
+  const [shareToast, setShareToast] = useState(false);
+
+  useEffect(() => {
+    const urlOverrides = decodeUrlToOverrides();
+    if (urlOverrides) {
+      setFormOverrides(urlOverrides);
+    }
+  }, []);
 
   const handleNlParsed = (data: Partial<SearchFormData>) => {
     setFormOverrides(data);
     setNlApplied(true);
     setTimeout(() => setNlApplied(false), 2000);
   };
+
+  const handleShare = useCallback(() => {
+    if (!lastSearchForm) return;
+    const url = encodeSearchToUrl(lastSearchForm);
+    const fullUrl = `${window.location.origin}${url}`;
+    navigator.clipboard.writeText(fullUrl).then(() => {
+      setShareToast(true);
+      setTimeout(() => setShareToast(false), 2000);
+    });
+    window.history.replaceState(null, '', url);
+  }, [lastSearchForm]);
 
   const handleSearch = async (form: SearchFormData) => {
     setView({ type: 'loading', mode: form.mode });
