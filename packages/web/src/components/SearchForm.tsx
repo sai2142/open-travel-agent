@@ -287,8 +287,9 @@ export default function SearchForm({ onSearch, loading, overrides }: Props) {
           </div>
         )}
 
-        {/* Date fields */}
+        {/* Date fields — multi-city dates are in the legs above */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+          {form.mode === 'multi-city' && (<></>)}
           {form.mode === 'exact' && (
             <>
               <div>
