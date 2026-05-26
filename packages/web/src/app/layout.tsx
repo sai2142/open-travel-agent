@@ -2,8 +2,8 @@ import type { Metadata } from 'next';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'Open Travel Agent',
-  description: 'AI-powered flight search with credit card rewards optimization',
+  title: 'Flyte — Find Your Best Flight',
+  description: 'Search 300+ airlines, optimize for credit card rewards, and find the cheapest dates to fly.',
 };
 
 export default function RootLayout({
