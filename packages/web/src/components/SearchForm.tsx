@@ -44,6 +44,7 @@ const modeOptions: { value: SearchMode; label: string; icon: string }[] = [
   { value: 'date-flex', label: 'Flexible', icon: '📅' },
   { value: 'weekend', label: 'Weekend', icon: '🌴' },
   { value: 'trip-length', label: 'Trip Length', icon: '📏' },
+  { value: 'multi-city', label: 'Multi-City', icon: '🗺' },
 ];
 
 function getNextMonth(): string {
