@@ -1,10 +1,12 @@
 'use client';
 
-import { useState, useRef } from 'react';
+import { useState, useMemo } from 'react';
 import SearchForm, { type SearchFormData } from '@/components/SearchForm';
 import NaturalLanguageBar from '@/components/NaturalLanguageBar';
 import FlightCard from '@/components/FlightCard';
 import DateGrid from '@/components/DateGrid';
+import ResultFilters, { applyFilters, getDefaultFilters, type FilterState } from '@/components/ResultFilters';
+import PriceInsight, { getPriceLabel } from '@/components/PriceInsight';
 import { ResultsSkeleton } from '@/components/LoadingSkeleton';
 
 type ViewState =
@@ -15,7 +17,8 @@ type ViewState =
   | { type: 'error'; message: string };
 
 interface ExactResults {
-  offers: Array<Record<string, unknown>>;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  offers: any[];
   totalOffers: number;
   provider: string;
 }
@@ -41,6 +44,7 @@ export default function Home() {
   const [view, setView] = useState<ViewState>({ type: 'idle' });
   const [formOverrides, setFormOverrides] = useState<Partial<SearchFormData> | null>(null);
   const [nlApplied, setNlApplied] = useState(false);
+  const [filters, setFilters] = useState<FilterState>(getDefaultFilters);
 
   const handleNlParsed = (data: Partial<SearchFormData>) => {
     setFormOverrides(data);
@@ -50,6 +54,7 @@ export default function Home() {
 
   const handleSearch = async (form: SearchFormData) => {
     setView({ type: 'loading', mode: form.mode });
+    setFilters(getDefaultFilters());
 
     try {
       if (form.mode === 'exact') {
@@ -111,6 +116,16 @@ export default function Home() {
   };
 
   const isIdle = view.type === 'idle';
+
+  const filteredResults = useMemo(() => {
+    if (view.type !== 'exact-results') return [];
+    return applyFilters(view.data.offers, filters);
+  }, [view, filters]);
+
+  const allPrices = useMemo(() => {
+    if (view.type !== 'exact-results') return [];
+    return view.data.offers.map((r: { offer: { price: { total: number } } }) => r.offer.price.total);
+  }, [view]);
 
   return (
     <main className="min-h-screen flex flex-col">
@@ -203,19 +218,37 @@ export default function Home() {
         )}
 
         {view.type === 'exact-results' && (
-          <div className="space-y-3 fade-in">
-            <div className="flex items-center justify-between text-xs text-[var(--color-text-muted)] px-1 pb-1">
+          <div className="space-y-3">
+            {/* Provider badge */}
+            <div className="flex items-center justify-between text-xs text-[var(--color-text-muted)] px-1">
               <span>{view.data.totalOffers} flights found</span>
               <span className="glass-subtle px-2 py-0.5 rounded-full">via {view.data.provider}</span>
             </div>
-            {view.data.offers.length === 0 ? (
+
+            {/* Price Insight */}
+            <PriceInsight prices={allPrices} />
+
+            {/* Filters + Sort */}
+            <ResultFilters
+              results={view.data.offers}
+              filters={filters}
+              onChange={setFilters}
+              resultCount={filteredResults.length}
+            />
+
+            {/* Flight Cards */}
+            {filteredResults.length === 0 ? (
               <div className="glass p-8 text-center text-[var(--color-text-muted)]">
-                No flights found. Try adjusting your search.
+                No flights match your filters. Try adjusting them.
               </div>
             ) : (
-              // eslint-disable-next-line @typescript-eslint/no-explicit-any
-              view.data.offers.map((result: any, i: number) => (
-                <FlightCard key={i} result={result} rank={i} />
+              filteredResults.map((result, i) => (
+                <FlightCard
+                  key={i}
+                  result={result}
+                  rank={i}
+                  priceLabel={getPriceLabel(result.offer.price.total, allPrices)}
+                />
               ))
             )}
           </div>
