@@ -82,6 +82,8 @@
     --font-sans: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
     --color-red-500: #fb2c36;
+    --color-amber-500: #f99c00;
+    --color-emerald-500: #00bb7f;
     --color-indigo-300: #a4b3ff;
     --color-indigo-400: #7d87ff;
     --color-indigo-500: #625fff;
@@ -147,6 +149,8 @@
   @supports (color: color(display-p3 0 0 0)) {
     :root, :host {
       --color-red-500: color(display-p3 .903738 .262579 .253307);
+      --color-amber-500: color(display-p3 .93994 .620584 .0585367);
+      --color-emerald-500: color(display-p3 .267113 .726847 .508397);
       --color-indigo-300: color(display-p3 .650892 .700156 .990824);
       --color-indigo-400: color(display-p3 .494992 .525291 .985107);
       --color-indigo-500: color(display-p3 .380374 .372235 .971707);
@@ -159,6 +163,8 @@
   @supports (color: lab(0% 0 0)) {
     :root, :host {
       --color-red-500: lab(55.4814% 75.0732 48.8528);
+      --color-amber-500: lab(72.7183% 31.8672 97.9407);
+      --color-emerald-500: lab(66.9756% -58.27 19.5419);
       --color-indigo-300: lab(74.0235% 8.54138 -41.6075);
       --color-indigo-400: lab(59.866% 22.4833 -64.4485);
       --color-indigo-500: lab(48.295% 38.3129 -81.9673);
@@ -905,6 +911,16 @@
     border-radius: var(--radius-xl);
   }
 
+  .rounded-l-full {
+    border-top-left-radius: 3.40282e38px;
+    border-bottom-left-radius: 3.40282e38px;
+  }
+
+  .rounded-r-full {
+    border-top-right-radius: 3.40282e38px;
+    border-bottom-right-radius: 3.40282e38px;
+  }
+
   .border {
     border-style: var(--tw-border-style);
     border-width: 1px;
@@ -1001,6 +1017,34 @@
     background-color: var(--color-text-muted);
   }
 
+  .bg-amber-500 {
+    background-color: var(--color-amber-500);
+  }
+
+  .bg-amber-500\/50 {
+    background-color: rgba(249, 156, 0, .5);
+  }
+
+  @supports (color: color-mix(in lab, red, red)) {
+    .bg-amber-500\/50 {
+      background-color: color-mix(in oklab, var(--color-amber-500) 50%, transparent);
+    }
+  }
+
+  .bg-emerald-500 {
+    background-color: var(--color-emerald-500);
+  }
+
+  .bg-emerald-500\/60 {
+    background-color: rgba(0, 187, 127, .6);
+  }
+
+  @supports (color: color-mix(in lab, red, red)) {
+    .bg-emerald-500\/60 {
+      background-color: color-mix(in oklab, var(--color-emerald-500) 60%, transparent);
+    }
+  }
+
   .bg-indigo-300 {
     background-color: var(--color-indigo-300);
   }
@@ -1019,6 +1063,10 @@
     background-color: var(--color-indigo-500);
   }
 
+  .bg-red-500 {
+    background-color: var(--color-red-500);
+  }
+
   .bg-red-500\/10 {
     background-color: rgba(251, 44, 54, .1);
   }
@@ -1026,6 +1074,16 @@
   @supports (color: color-mix(in lab, red, red)) {
     .bg-red-500\/10 {
       background-color: color-mix(in oklab, var(--color-red-500) 10%, transparent);
+    }
+  }
+
+  .bg-red-500\/50 {
+    background-color: rgba(251, 44, 54, .5);
+  }
+
+  @supports (color: color-mix(in lab, red, red)) {
+    .bg-red-500\/50 {
+      background-color: color-mix(in oklab, var(--color-red-500) 50%, transparent);
     }
   }
 
