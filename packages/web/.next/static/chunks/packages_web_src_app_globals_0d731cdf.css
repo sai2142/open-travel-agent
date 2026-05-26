@@ -722,6 +722,14 @@
     height: calc(var(--spacing) * 10);
   }
 
+  .h-\[42px\] {
+    height: 42px;
+  }
+
+  .h-full {
+    height: 100%;
+  }
+
   .h-px {
     height: 1px;
   }
@@ -863,6 +871,12 @@
 
   .cursor-pointer {
     cursor: pointer;
+  }
+
+  .appearance-none {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
   }
 
   .grid-cols-2 {
@@ -1165,6 +1179,10 @@
     .border-l-white\/20 {
       border-left-color: color-mix(in oklab, var(--color-white) 20%, transparent);
     }
+  }
+
+  .bg-\[\#1e1e30\] {
+    background-color: #1e1e30;
   }
 
   .bg-\[var\(--color-text-muted\)\] {

@@ -194,13 +194,13 @@ export default function ResultFilters({ results, filters, onChange, resultCount 
       {/* Filter panel */}
       {expanded && (
         <div className="glass p-5 space-y-5 fade-in">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-x-6 gap-y-5">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-x-6 gap-y-5 items-end">
             {/* Stops */}
-            <div>
+            <div className="flex flex-col">
               <label className="block text-[10px] text-[var(--color-text-muted)] uppercase tracking-widest mb-2.5">
                 Max Stops
               </label>
-              <div className="flex gap-1">
+              <div className="flex gap-1 h-[42px] items-center">
                 {[
                   { value: null, label: 'Any' },
                   { value: 0, label: '0' },
@@ -210,7 +210,7 @@ export default function ResultFilters({ results, filters, onChange, resultCount 
                   <button
                     key={String(opt.value)}
                     onClick={() => update({ maxStops: opt.value })}
-                    className={`flex-1 py-1.5 rounded-lg text-xs font-medium transition-all ${
+                    className={`flex-1 h-full rounded-lg text-sm font-medium transition-all ${
                       filters.maxStops === opt.value
                         ? 'bg-white/[0.08] text-white'
                         : 'bg-white/[0.02] text-[var(--color-text-muted)] hover:bg-white/[0.04]'
@@ -223,7 +223,7 @@ export default function ResultFilters({ results, filters, onChange, resultCount 
             </div>
 
             {/* Max Price */}
-            <div>
+            <div className="flex flex-col">
               <label className="block text-[10px] text-[var(--color-text-muted)] uppercase tracking-widest mb-2.5">
                 Max Price
               </label>
@@ -239,7 +239,7 @@ export default function ResultFilters({ results, filters, onChange, resultCount 
                 }}
                 className="w-full accent-indigo-500 mb-2"
               />
-              <div className="flex items-center gap-1.5 bg-white/[0.03] border border-white/[0.07] rounded-lg px-3 py-2.5">
+              <div className="flex items-center gap-1.5 bg-white/[0.03] border border-white/[0.07] rounded-lg px-3 h-[42px]">
                 <span className="text-sm text-[var(--color-text-muted)] font-medium">$</span>
                 <input
                   type="number"
@@ -257,7 +257,7 @@ export default function ResultFilters({ results, filters, onChange, resultCount 
             </div>
 
             {/* Max Duration */}
-            <div>
+            <div className="flex flex-col">
               <label className="block text-[10px] text-[var(--color-text-muted)] uppercase tracking-widest mb-2.5">
                 Max Duration
               </label>
@@ -273,7 +273,7 @@ export default function ResultFilters({ results, filters, onChange, resultCount 
                 }}
                 className="w-full accent-indigo-500 mb-2"
               />
-              <div className="flex items-center gap-1.5 bg-white/[0.03] border border-white/[0.07] rounded-lg px-3 py-2.5">
+              <div className="flex items-center gap-1.5 bg-white/[0.03] border border-white/[0.07] rounded-lg px-3 h-[42px]">
                 <span className="text-sm text-[var(--color-text-muted)] font-medium">hr</span>
                 <input
                   type="number"
@@ -291,7 +291,7 @@ export default function ResultFilters({ results, filters, onChange, resultCount 
             </div>
 
             {/* Departure Time */}
-            <div>
+            <div className="flex flex-col">
               <label className="block text-[10px] text-[var(--color-text-muted)] uppercase tracking-widest mb-2.5">
                 Departure Window
               </label>
@@ -299,31 +299,25 @@ export default function ResultFilters({ results, filters, onChange, resultCount 
                 {formatHour(filters.departTimeMin)} — {formatHour(filters.departTimeMax)}
               </div>
               <div className="flex items-center gap-3">
-                <div className="flex-1 bg-white/[0.03] border border-white/[0.07] rounded-lg px-3 py-2.5">
-                  <select
-                    value={filters.departTimeMin}
-                    onChange={(e) => update({ departTimeMin: Number(e.target.value) })}
-                    className="bg-transparent text-sm text-[var(--color-text-primary)] outline-none w-full cursor-pointer"
-                    style={{ colorScheme: 'dark' }}
-                  >
-                    {Array.from({ length: 24 }, (_, i) => (
-                      <option key={i} value={i}>{formatHour(i)}</option>
-                    ))}
-                  </select>
-                </div>
-                <span className="text-sm text-[var(--color-text-muted)] font-medium">to</span>
-                <div className="flex-1 bg-white/[0.03] border border-white/[0.07] rounded-lg px-3 py-2.5">
-                  <select
-                    value={filters.departTimeMax}
-                    onChange={(e) => update({ departTimeMax: Number(e.target.value) })}
-                    className="bg-transparent text-sm text-[var(--color-text-primary)] outline-none w-full cursor-pointer"
-                    style={{ colorScheme: 'dark' }}
-                  >
-                    {Array.from({ length: 24 }, (_, i) => (
-                      <option key={i} value={i}>{formatHour(i)}</option>
-                    ))}
-                  </select>
-                </div>
+                <select
+                  value={filters.departTimeMin}
+                  onChange={(e) => update({ departTimeMin: Number(e.target.value) })}
+                  className="flex-1 bg-[#1e1e30] border border-white/[0.07] rounded-lg px-3 h-[42px] text-sm text-white outline-none cursor-pointer appearance-none"
+                >
+                  {Array.from({ length: 24 }, (_, i) => (
+                    <option key={i} value={i} className="bg-[#1e1e30] text-white">{formatHour(i)}</option>
+                  ))}
+                </select>
+                <span className="text-sm text-[var(--color-text-muted)] font-medium shrink-0">to</span>
+                <select
+                  value={filters.departTimeMax}
+                  onChange={(e) => update({ departTimeMax: Number(e.target.value) })}
+                  className="flex-1 bg-[#1e1e30] border border-white/[0.07] rounded-lg px-3 h-[42px] text-sm text-white outline-none cursor-pointer appearance-none"
+                >
+                  {Array.from({ length: 24 }, (_, i) => (
+                    <option key={i} value={i} className="bg-[#1e1e30] text-white">{formatHour(i)}</option>
+                  ))}
+                </select>
               </div>
             </div>
           </div>
