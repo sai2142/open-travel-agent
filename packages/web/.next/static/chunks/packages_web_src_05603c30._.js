@@ -1006,6 +1006,9 @@ __turbopack_context__.s([
     ()=>FlightCard
 ]);
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/index.js [app-client] (ecmascript)");
+;
+var _s = __turbopack_context__.k.signature();
 'use client';
 ;
 function isValidBookingUrl(url) {
@@ -1240,268 +1243,883 @@ function ItineraryRow(param) {
     }, this);
 }
 _c = ItineraryRow;
+function SegmentDetail(param) {
+    let { segments } = param;
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+        className: "space-y-0",
+        children: segments.map((seg, i)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                children: [
+                    i > 0 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "flex items-center gap-2 py-2 pl-6",
+                        children: [
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "w-px h-4 bg-white/10"
+                            }, void 0, false, {
+                                fileName: "[project]/packages/web/src/components/FlightCard.tsx",
+                                lineNumber: 165,
+                                columnNumber: 15
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-amber-500/10 border border-amber-500/15",
+                                children: [
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
+                                        width: "12",
+                                        height: "12",
+                                        viewBox: "0 0 24 24",
+                                        fill: "none",
+                                        stroke: "currentColor",
+                                        strokeWidth: "2",
+                                        className: "text-amber-400",
+                                        children: [
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("circle", {
+                                                cx: "12",
+                                                cy: "12",
+                                                r: "10"
+                                            }, void 0, false, {
+                                                fileName: "[project]/packages/web/src/components/FlightCard.tsx",
+                                                lineNumber: 168,
+                                                columnNumber: 19
+                                            }, this),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("polyline", {
+                                                points: "12 6 12 12 16 14"
+                                            }, void 0, false, {
+                                                fileName: "[project]/packages/web/src/components/FlightCard.tsx",
+                                                lineNumber: 169,
+                                                columnNumber: 19
+                                            }, this)
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "[project]/packages/web/src/components/FlightCard.tsx",
+                                        lineNumber: 167,
+                                        columnNumber: 17
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                        className: "text-[11px] text-amber-400 font-medium",
+                                        children: [
+                                            layoverDuration(segments[i - 1].arrival.at, seg.departure.at),
+                                            " layover in ",
+                                            seg.departure.airport
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "[project]/packages/web/src/components/FlightCard.tsx",
+                                        lineNumber: 171,
+                                        columnNumber: 17
+                                    }, this)
+                                ]
+                            }, void 0, true, {
+                                fileName: "[project]/packages/web/src/components/FlightCard.tsx",
+                                lineNumber: 166,
+                                columnNumber: 15
+                            }, this)
+                        ]
+                    }, void 0, true, {
+                        fileName: "[project]/packages/web/src/components/FlightCard.tsx",
+                        lineNumber: 164,
+                        columnNumber: 13
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "flex items-start gap-3 py-2",
+                        children: [
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "w-5 flex flex-col items-center pt-1",
+                                children: [
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        className: "w-2 h-2 rounded-full border-2 border-indigo-400/50 bg-transparent"
+                                    }, void 0, false, {
+                                        fileName: "[project]/packages/web/src/components/FlightCard.tsx",
+                                        lineNumber: 181,
+                                        columnNumber: 15
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        className: "w-px flex-1 bg-white/10 min-h-[24px]"
+                                    }, void 0, false, {
+                                        fileName: "[project]/packages/web/src/components/FlightCard.tsx",
+                                        lineNumber: 182,
+                                        columnNumber: 15
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        className: "w-2 h-2 rounded-full bg-indigo-400/50"
+                                    }, void 0, false, {
+                                        fileName: "[project]/packages/web/src/components/FlightCard.tsx",
+                                        lineNumber: 183,
+                                        columnNumber: 15
+                                    }, this)
+                                ]
+                            }, void 0, true, {
+                                fileName: "[project]/packages/web/src/components/FlightCard.tsx",
+                                lineNumber: 180,
+                                columnNumber: 13
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "flex-1 space-y-2 min-w-0",
+                                children: [
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        className: "flex items-baseline justify-between",
+                                        children: [
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                children: [
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                        className: "text-sm font-semibold",
+                                                        children: formatTime(seg.departure.at)
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/packages/web/src/components/FlightCard.tsx",
+                                                        lineNumber: 189,
+                                                        columnNumber: 19
+                                                    }, this),
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                        className: "text-xs text-[var(--color-text-muted)] ml-2",
+                                                        children: seg.departure.airport
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/packages/web/src/components/FlightCard.tsx",
+                                                        lineNumber: 190,
+                                                        columnNumber: 19
+                                                    }, this),
+                                                    seg.departure.terminal && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                        className: "text-[10px] text-[var(--color-text-muted)] ml-1",
+                                                        children: [
+                                                            "T",
+                                                            seg.departure.terminal
+                                                        ]
+                                                    }, void 0, true, {
+                                                        fileName: "[project]/packages/web/src/components/FlightCard.tsx",
+                                                        lineNumber: 192,
+                                                        columnNumber: 21
+                                                    }, this)
+                                                ]
+                                            }, void 0, true, {
+                                                fileName: "[project]/packages/web/src/components/FlightCard.tsx",
+                                                lineNumber: 188,
+                                                columnNumber: 17
+                                            }, this),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                className: "text-right",
+                                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                    className: "text-[11px] text-[var(--color-text-secondary)] font-mono",
+                                                    children: seg.flightNumber
+                                                }, void 0, false, {
+                                                    fileName: "[project]/packages/web/src/components/FlightCard.tsx",
+                                                    lineNumber: 196,
+                                                    columnNumber: 19
+                                                }, this)
+                                            }, void 0, false, {
+                                                fileName: "[project]/packages/web/src/components/FlightCard.tsx",
+                                                lineNumber: 195,
+                                                columnNumber: 17
+                                            }, this)
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "[project]/packages/web/src/components/FlightCard.tsx",
+                                        lineNumber: 187,
+                                        columnNumber: 15
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        className: "flex items-center gap-2 text-[11px] text-[var(--color-text-muted)]",
+                                        children: [
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                children: parseDuration(seg.duration)
+                                            }, void 0, false, {
+                                                fileName: "[project]/packages/web/src/components/FlightCard.tsx",
+                                                lineNumber: 201,
+                                                columnNumber: 17
+                                            }, this),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                className: "w-1 h-1 rounded-full bg-white/20"
+                                            }, void 0, false, {
+                                                fileName: "[project]/packages/web/src/components/FlightCard.tsx",
+                                                lineNumber: 202,
+                                                columnNumber: 17
+                                            }, this),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                children: seg.carrierName || seg.carrier
+                                            }, void 0, false, {
+                                                fileName: "[project]/packages/web/src/components/FlightCard.tsx",
+                                                lineNumber: 203,
+                                                columnNumber: 17
+                                            }, this),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                className: "w-1 h-1 rounded-full bg-white/20"
+                                            }, void 0, false, {
+                                                fileName: "[project]/packages/web/src/components/FlightCard.tsx",
+                                                lineNumber: 204,
+                                                columnNumber: 17
+                                            }, this),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                className: "capitalize",
+                                                children: seg.cabin.toLowerCase()
+                                            }, void 0, false, {
+                                                fileName: "[project]/packages/web/src/components/FlightCard.tsx",
+                                                lineNumber: 205,
+                                                columnNumber: 17
+                                            }, this)
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "[project]/packages/web/src/components/FlightCard.tsx",
+                                        lineNumber: 200,
+                                        columnNumber: 15
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        className: "flex items-baseline",
+                                        children: [
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                className: "text-sm font-semibold",
+                                                children: formatTime(seg.arrival.at)
+                                            }, void 0, false, {
+                                                fileName: "[project]/packages/web/src/components/FlightCard.tsx",
+                                                lineNumber: 209,
+                                                columnNumber: 17
+                                            }, this),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                className: "text-xs text-[var(--color-text-muted)] ml-2",
+                                                children: seg.arrival.airport
+                                            }, void 0, false, {
+                                                fileName: "[project]/packages/web/src/components/FlightCard.tsx",
+                                                lineNumber: 210,
+                                                columnNumber: 17
+                                            }, this),
+                                            seg.arrival.terminal && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                className: "text-[10px] text-[var(--color-text-muted)] ml-1",
+                                                children: [
+                                                    "T",
+                                                    seg.arrival.terminal
+                                                ]
+                                            }, void 0, true, {
+                                                fileName: "[project]/packages/web/src/components/FlightCard.tsx",
+                                                lineNumber: 212,
+                                                columnNumber: 19
+                                            }, this)
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "[project]/packages/web/src/components/FlightCard.tsx",
+                                        lineNumber: 208,
+                                        columnNumber: 15
+                                    }, this)
+                                ]
+                            }, void 0, true, {
+                                fileName: "[project]/packages/web/src/components/FlightCard.tsx",
+                                lineNumber: 186,
+                                columnNumber: 13
+                            }, this)
+                        ]
+                    }, void 0, true, {
+                        fileName: "[project]/packages/web/src/components/FlightCard.tsx",
+                        lineNumber: 179,
+                        columnNumber: 11
+                    }, this)
+                ]
+            }, i, true, {
+                fileName: "[project]/packages/web/src/components/FlightCard.tsx",
+                lineNumber: 161,
+                columnNumber: 9
+            }, this))
+    }, void 0, false, {
+        fileName: "[project]/packages/web/src/components/FlightCard.tsx",
+        lineNumber: 159,
+        columnNumber: 5
+    }, this);
+}
+_c1 = SegmentDetail;
 function FlightCard(param) {
     let { result, rank, priceLabel } = param;
-    const { offer, score, cardRecommendation } = result;
+    _s();
+    const { offer, score, breakdown, cardRecommendation } = result;
+    const [expanded, setExpanded] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-        className: "glass hover:bg-[var(--color-glass-hover)] hover:border-white/10 transition-all duration-200 p-5 fade-in-up",
+        className: "glass hover:bg-[var(--color-glass-hover)] hover:border-white/10 transition-all duration-200 fade-in-up cursor-pointer",
         style: {
             animationDelay: "".concat(rank * 70, "ms"),
             opacity: 0
         },
+        onClick: ()=>setExpanded(!expanded),
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "flex items-center justify-between gap-4 mb-4",
+                className: "p-5",
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "flex items-center gap-2.5",
+                        className: "flex items-center justify-between gap-4 mb-4",
                         children: [
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                className: "text-xs font-bold px-2.5 py-1 rounded-lg ".concat(rank === 0 ? 'bg-gradient-to-r from-indigo-500/20 to-purple-500/20 text-indigo-300 border border-indigo-500/20' : 'bg-white/[0.04] text-[var(--color-text-muted)]'),
-                                children: [
-                                    "#",
-                                    rank + 1
-                                ]
-                            }, void 0, true, {
-                                fileName: "[project]/packages/web/src/components/FlightCard.tsx",
-                                lineNumber: 168,
-                                columnNumber: 11
-                            }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "flex items-center gap-1",
+                                className: "flex items-center gap-2.5",
                                 children: [
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        className: "w-1 h-1 rounded-full bg-indigo-400/50"
-                                    }, void 0, false, {
-                                        fileName: "[project]/packages/web/src/components/FlightCard.tsx",
-                                        lineNumber: 176,
-                                        columnNumber: 13
-                                    }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                        className: "text-[11px] text-[var(--color-text-muted)]",
+                                        className: "text-xs font-bold px-2.5 py-1 rounded-lg ".concat(rank === 0 ? 'bg-gradient-to-r from-indigo-500/20 to-purple-500/20 text-indigo-300 border border-indigo-500/20' : 'bg-white/[0.04] text-[var(--color-text-muted)]'),
                                         children: [
-                                            Math.round(score * 100),
-                                            " pts"
+                                            "#",
+                                            rank + 1
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/packages/web/src/components/FlightCard.tsx",
-                                        lineNumber: 177,
+                                        lineNumber: 237,
+                                        columnNumber: 13
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        className: "flex items-center gap-1",
+                                        children: [
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                className: "w-1 h-1 rounded-full bg-indigo-400/50"
+                                            }, void 0, false, {
+                                                fileName: "[project]/packages/web/src/components/FlightCard.tsx",
+                                                lineNumber: 245,
+                                                columnNumber: 15
+                                            }, this),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                className: "text-[11px] text-[var(--color-text-muted)]",
+                                                children: [
+                                                    Math.round(score * 100),
+                                                    " pts"
+                                                ]
+                                            }, void 0, true, {
+                                                fileName: "[project]/packages/web/src/components/FlightCard.tsx",
+                                                lineNumber: 246,
+                                                columnNumber: 15
+                                            }, this)
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "[project]/packages/web/src/components/FlightCard.tsx",
+                                        lineNumber: 244,
+                                        columnNumber: 13
+                                    }, this),
+                                    offer.seatsRemaining && offer.seatsRemaining <= 4 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                        className: "text-[10px] text-[var(--color-danger)] font-semibold bg-red-500/10 px-1.5 py-0.5 rounded",
+                                        children: [
+                                            offer.seatsRemaining,
+                                            " left"
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "[project]/packages/web/src/components/FlightCard.tsx",
+                                        lineNumber: 251,
+                                        columnNumber: 15
+                                    }, this)
+                                ]
+                            }, void 0, true, {
+                                fileName: "[project]/packages/web/src/components/FlightCard.tsx",
+                                lineNumber: 236,
+                                columnNumber: 11
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "flex items-center gap-3",
+                                children: [
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        className: "text-right",
+                                        children: [
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                className: "price-tag text-xl",
+                                                children: [
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                        className: "text-[var(--color-text-muted)] text-sm font-normal",
+                                                        children: "$"
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/packages/web/src/components/FlightCard.tsx",
+                                                        lineNumber: 260,
+                                                        columnNumber: 17
+                                                    }, this),
+                                                    offer.price.total.toLocaleString('en-US', {
+                                                        minimumFractionDigits: 0,
+                                                        maximumFractionDigits: 0
+                                                    })
+                                                ]
+                                            }, void 0, true, {
+                                                fileName: "[project]/packages/web/src/components/FlightCard.tsx",
+                                                lineNumber: 259,
+                                                columnNumber: 15
+                                            }, this),
+                                            (priceLabel === null || priceLabel === void 0 ? void 0 : priceLabel.label) && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                className: "text-[10px] font-semibold ".concat(priceLabel.color),
+                                                children: [
+                                                    priceLabel.label,
+                                                    " price"
+                                                ]
+                                            }, void 0, true, {
+                                                fileName: "[project]/packages/web/src/components/FlightCard.tsx",
+                                                lineNumber: 264,
+                                                columnNumber: 17
+                                            }, this),
+                                            !(priceLabel === null || priceLabel === void 0 ? void 0 : priceLabel.label) && offer.price.perPassenger && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                className: "text-[10px] text-[var(--color-text-muted)]",
+                                                children: [
+                                                    "$",
+                                                    offer.price.perPassenger,
+                                                    "/person"
+                                                ]
+                                            }, void 0, true, {
+                                                fileName: "[project]/packages/web/src/components/FlightCard.tsx",
+                                                lineNumber: 269,
+                                                columnNumber: 17
+                                            }, this)
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "[project]/packages/web/src/components/FlightCard.tsx",
+                                        lineNumber: 258,
+                                        columnNumber: 13
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
+                                        width: "16",
+                                        height: "16",
+                                        viewBox: "0 0 24 24",
+                                        fill: "none",
+                                        stroke: "currentColor",
+                                        strokeWidth: "2",
+                                        strokeLinecap: "round",
+                                        className: "text-[var(--color-text-muted)] transition-transform duration-200 ".concat(expanded ? 'rotate-180' : ''),
+                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("polyline", {
+                                            points: "6 9 12 15 18 9"
+                                        }, void 0, false, {
+                                            fileName: "[project]/packages/web/src/components/FlightCard.tsx",
+                                            lineNumber: 278,
+                                            columnNumber: 15
+                                        }, this)
+                                    }, void 0, false, {
+                                        fileName: "[project]/packages/web/src/components/FlightCard.tsx",
+                                        lineNumber: 274,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/packages/web/src/components/FlightCard.tsx",
-                                lineNumber: 175,
+                                lineNumber: 257,
                                 columnNumber: 11
-                            }, this),
-                            offer.seatsRemaining && offer.seatsRemaining <= 4 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                className: "text-[10px] text-[var(--color-danger)] font-semibold bg-red-500/10 px-1.5 py-0.5 rounded",
-                                children: [
-                                    offer.seatsRemaining,
-                                    " left"
-                                ]
-                            }, void 0, true, {
-                                fileName: "[project]/packages/web/src/components/FlightCard.tsx",
-                                lineNumber: 182,
-                                columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/packages/web/src/components/FlightCard.tsx",
-                        lineNumber: 167,
+                        lineNumber: 235,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "text-right",
+                        className: "space-y-3",
                         children: [
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "price-tag text-xl",
-                                children: [
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                        className: "text-[var(--color-text-muted)] text-sm font-normal",
-                                        children: "$"
-                                    }, void 0, false, {
-                                        fileName: "[project]/packages/web/src/components/FlightCard.tsx",
-                                        lineNumber: 190,
-                                        columnNumber: 13
-                                    }, this),
-                                    offer.price.total.toLocaleString('en-US', {
-                                        minimumFractionDigits: 0,
-                                        maximumFractionDigits: 0
-                                    })
-                                ]
-                            }, void 0, true, {
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(ItineraryRow, {
+                                itinerary: offer.outbound,
+                                label: formatDate(offer.outbound.segments[0].departure.at)
+                            }, void 0, false, {
                                 fileName: "[project]/packages/web/src/components/FlightCard.tsx",
-                                lineNumber: 189,
+                                lineNumber: 285,
                                 columnNumber: 11
                             }, this),
-                            (priceLabel === null || priceLabel === void 0 ? void 0 : priceLabel.label) && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "text-[10px] font-semibold ".concat(priceLabel.color),
+                            offer.inbound && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Fragment"], {
                                 children: [
-                                    priceLabel.label,
-                                    " price"
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        className: "border-t border-white/[0.04]"
+                                    }, void 0, false, {
+                                        fileName: "[project]/packages/web/src/components/FlightCard.tsx",
+                                        lineNumber: 288,
+                                        columnNumber: 15
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(ItineraryRow, {
+                                        itinerary: offer.inbound,
+                                        label: formatDate(offer.inbound.segments[0].departure.at)
+                                    }, void 0, false, {
+                                        fileName: "[project]/packages/web/src/components/FlightCard.tsx",
+                                        lineNumber: 289,
+                                        columnNumber: 15
+                                    }, this)
                                 ]
-                            }, void 0, true, {
-                                fileName: "[project]/packages/web/src/components/FlightCard.tsx",
-                                lineNumber: 194,
-                                columnNumber: 13
-                            }, this),
-                            !(priceLabel === null || priceLabel === void 0 ? void 0 : priceLabel.label) && offer.price.perPassenger && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "text-[10px] text-[var(--color-text-muted)]",
-                                children: [
-                                    "$",
-                                    offer.price.perPassenger,
-                                    "/person"
-                                ]
-                            }, void 0, true, {
-                                fileName: "[project]/packages/web/src/components/FlightCard.tsx",
-                                lineNumber: 199,
-                                columnNumber: 13
-                            }, this)
+                            }, void 0, true)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/packages/web/src/components/FlightCard.tsx",
-                        lineNumber: 188,
+                        lineNumber: 284,
                         columnNumber: 9
+                    }, this),
+                    cardRecommendation && !expanded && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "mt-4 pt-3 border-t border-white/[0.04]",
+                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                            className: "flex items-center justify-between text-xs",
+                            children: [
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                    className: "text-[var(--color-success)] flex items-center gap-1.5",
+                                    children: [
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                            children: "💳"
+                                        }, void 0, false, {
+                                            fileName: "[project]/packages/web/src/components/FlightCard.tsx",
+                                            lineNumber: 299,
+                                            columnNumber: 17
+                                        }, this),
+                                        cardRecommendation.card.name
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "[project]/packages/web/src/components/FlightCard.tsx",
+                                    lineNumber: 298,
+                                    columnNumber: 15
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                    className: "text-[var(--color-success)] font-semibold",
+                                    children: [
+                                        "+$",
+                                        cardRecommendation.totalEstimatedValue.toFixed(0),
+                                        " value"
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "[project]/packages/web/src/components/FlightCard.tsx",
+                                    lineNumber: 302,
+                                    columnNumber: 15
+                                }, this)
+                            ]
+                        }, void 0, true, {
+                            fileName: "[project]/packages/web/src/components/FlightCard.tsx",
+                            lineNumber: 297,
+                            columnNumber: 13
+                        }, this)
+                    }, void 0, false, {
+                        fileName: "[project]/packages/web/src/components/FlightCard.tsx",
+                        lineNumber: 296,
+                        columnNumber: 11
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/packages/web/src/components/FlightCard.tsx",
-                lineNumber: 166,
+                lineNumber: 233,
                 columnNumber: 7
             }, this),
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "space-y-3",
+            expanded && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: "border-t border-white/[0.06] bg-white/[0.015] px-5 pb-5 pt-4 space-y-5",
+                onClick: (e)=>e.stopPropagation(),
                 children: [
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(ItineraryRow, {
-                        itinerary: offer.outbound,
-                        label: formatDate(offer.outbound.segments[0].departure.at)
-                    }, void 0, false, {
-                        fileName: "[project]/packages/web/src/components/FlightCard.tsx",
-                        lineNumber: 208,
-                        columnNumber: 9
-                    }, this),
-                    offer.inbound && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Fragment"], {
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "border-t border-white/[0.04]"
-                            }, void 0, false, {
+                                className: "flex items-center gap-2 mb-2",
+                                children: [
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                        className: "text-[10px] text-[var(--color-text-muted)] uppercase tracking-widest",
+                                        children: "Outbound"
+                                    }, void 0, false, {
+                                        fileName: "[project]/packages/web/src/components/FlightCard.tsx",
+                                        lineNumber: 316,
+                                        columnNumber: 15
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                        className: "text-[10px] text-[var(--color-text-muted)]",
+                                        children: formatDate(offer.outbound.segments[0].departure.at)
+                                    }, void 0, false, {
+                                        fileName: "[project]/packages/web/src/components/FlightCard.tsx",
+                                        lineNumber: 317,
+                                        columnNumber: 15
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                        className: "text-[10px] text-[var(--color-text-muted)]",
+                                        children: "·"
+                                    }, void 0, false, {
+                                        fileName: "[project]/packages/web/src/components/FlightCard.tsx",
+                                        lineNumber: 318,
+                                        columnNumber: 15
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                        className: "text-[10px] text-[var(--color-text-secondary)]",
+                                        children: [
+                                            parseDuration(offer.outbound.duration),
+                                            " total"
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "[project]/packages/web/src/components/FlightCard.tsx",
+                                        lineNumber: 319,
+                                        columnNumber: 15
+                                    }, this)
+                                ]
+                            }, void 0, true, {
                                 fileName: "[project]/packages/web/src/components/FlightCard.tsx",
-                                lineNumber: 211,
+                                lineNumber: 315,
                                 columnNumber: 13
                             }, this),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(ItineraryRow, {
-                                itinerary: offer.inbound,
-                                label: formatDate(offer.inbound.segments[0].departure.at)
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(SegmentDetail, {
+                                segments: offer.outbound.segments
                             }, void 0, false, {
                                 fileName: "[project]/packages/web/src/components/FlightCard.tsx",
-                                lineNumber: 212,
+                                lineNumber: 321,
                                 columnNumber: 13
                             }, this)
                         ]
-                    }, void 0, true)
+                    }, void 0, true, {
+                        fileName: "[project]/packages/web/src/components/FlightCard.tsx",
+                        lineNumber: 314,
+                        columnNumber: 11
+                    }, this),
+                    offer.inbound && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        children: [
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "flex items-center gap-2 mb-2",
+                                children: [
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                        className: "text-[10px] text-[var(--color-text-muted)] uppercase tracking-widest",
+                                        children: "Return"
+                                    }, void 0, false, {
+                                        fileName: "[project]/packages/web/src/components/FlightCard.tsx",
+                                        lineNumber: 328,
+                                        columnNumber: 17
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                        className: "text-[10px] text-[var(--color-text-muted)]",
+                                        children: formatDate(offer.inbound.segments[0].departure.at)
+                                    }, void 0, false, {
+                                        fileName: "[project]/packages/web/src/components/FlightCard.tsx",
+                                        lineNumber: 329,
+                                        columnNumber: 17
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                        className: "text-[10px] text-[var(--color-text-muted)]",
+                                        children: "·"
+                                    }, void 0, false, {
+                                        fileName: "[project]/packages/web/src/components/FlightCard.tsx",
+                                        lineNumber: 330,
+                                        columnNumber: 17
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                        className: "text-[10px] text-[var(--color-text-secondary)]",
+                                        children: [
+                                            parseDuration(offer.inbound.duration),
+                                            " total"
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "[project]/packages/web/src/components/FlightCard.tsx",
+                                        lineNumber: 331,
+                                        columnNumber: 17
+                                    }, this)
+                                ]
+                            }, void 0, true, {
+                                fileName: "[project]/packages/web/src/components/FlightCard.tsx",
+                                lineNumber: 327,
+                                columnNumber: 15
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(SegmentDetail, {
+                                segments: offer.inbound.segments
+                            }, void 0, false, {
+                                fileName: "[project]/packages/web/src/components/FlightCard.tsx",
+                                lineNumber: 333,
+                                columnNumber: 15
+                            }, this)
+                        ]
+                    }, void 0, true, {
+                        fileName: "[project]/packages/web/src/components/FlightCard.tsx",
+                        lineNumber: 326,
+                        columnNumber: 13
+                    }, this),
+                    cardRecommendation && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "glass-subtle p-4 space-y-2",
+                        children: [
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "flex items-center gap-2",
+                                children: [
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                        className: "text-sm",
+                                        children: "💳"
+                                    }, void 0, false, {
+                                        fileName: "[project]/packages/web/src/components/FlightCard.tsx",
+                                        lineNumber: 341,
+                                        columnNumber: 17
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                        className: "text-sm font-medium text-[var(--color-success)]",
+                                        children: cardRecommendation.card.name
+                                    }, void 0, false, {
+                                        fileName: "[project]/packages/web/src/components/FlightCard.tsx",
+                                        lineNumber: 342,
+                                        columnNumber: 17
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                        className: "text-[10px] text-[var(--color-text-muted)]",
+                                        children: [
+                                            "by ",
+                                            cardRecommendation.card.issuer
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "[project]/packages/web/src/components/FlightCard.tsx",
+                                        lineNumber: 345,
+                                        columnNumber: 17
+                                    }, this)
+                                ]
+                            }, void 0, true, {
+                                fileName: "[project]/packages/web/src/components/FlightCard.tsx",
+                                lineNumber: 340,
+                                columnNumber: 15
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "flex items-center gap-4 text-xs",
+                                children: [
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        children: [
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                className: "text-[var(--color-text-muted)]",
+                                                children: "Rewards value: "
+                                            }, void 0, false, {
+                                                fileName: "[project]/packages/web/src/components/FlightCard.tsx",
+                                                lineNumber: 349,
+                                                columnNumber: 19
+                                            }, this),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                className: "text-[var(--color-success)] font-semibold",
+                                                children: [
+                                                    "$",
+                                                    cardRecommendation.estimatedRewardsValue.toFixed(2)
+                                                ]
+                                            }, void 0, true, {
+                                                fileName: "[project]/packages/web/src/components/FlightCard.tsx",
+                                                lineNumber: 350,
+                                                columnNumber: 19
+                                            }, this)
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "[project]/packages/web/src/components/FlightCard.tsx",
+                                        lineNumber: 348,
+                                        columnNumber: 17
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        children: [
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                className: "text-[var(--color-text-muted)]",
+                                                children: "Effective cost: "
+                                            }, void 0, false, {
+                                                fileName: "[project]/packages/web/src/components/FlightCard.tsx",
+                                                lineNumber: 353,
+                                                columnNumber: 19
+                                            }, this),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                className: "text-white font-semibold",
+                                                children: [
+                                                    "$",
+                                                    (offer.price.total - cardRecommendation.totalEstimatedValue).toFixed(0)
+                                                ]
+                                            }, void 0, true, {
+                                                fileName: "[project]/packages/web/src/components/FlightCard.tsx",
+                                                lineNumber: 354,
+                                                columnNumber: 19
+                                            }, this)
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "[project]/packages/web/src/components/FlightCard.tsx",
+                                        lineNumber: 352,
+                                        columnNumber: 17
+                                    }, this)
+                                ]
+                            }, void 0, true, {
+                                fileName: "[project]/packages/web/src/components/FlightCard.tsx",
+                                lineNumber: 347,
+                                columnNumber: 15
+                            }, this),
+                            cardRecommendation.rationale && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                className: "text-[11px] text-[var(--color-text-secondary)] leading-relaxed",
+                                children: cardRecommendation.rationale
+                            }, void 0, false, {
+                                fileName: "[project]/packages/web/src/components/FlightCard.tsx",
+                                lineNumber: 360,
+                                columnNumber: 17
+                            }, this)
+                        ]
+                    }, void 0, true, {
+                        fileName: "[project]/packages/web/src/components/FlightCard.tsx",
+                        lineNumber: 339,
+                        columnNumber: 13
+                    }, this),
+                    breakdown && Object.keys(breakdown).length > 0 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        children: [
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                className: "text-[10px] text-[var(--color-text-muted)] uppercase tracking-widest",
+                                children: "Score Breakdown"
+                            }, void 0, false, {
+                                fileName: "[project]/packages/web/src/components/FlightCard.tsx",
+                                lineNumber: 370,
+                                columnNumber: 15
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "flex flex-wrap gap-2 mt-2",
+                                children: Object.entries(breakdown).map((param)=>{
+                                    let [key, value] = param;
+                                    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        className: "flex items-center gap-1.5 bg-white/[0.03] rounded-lg px-2.5 py-1.5",
+                                        children: [
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                className: "text-[11px] text-[var(--color-text-muted)] capitalize",
+                                                children: key.replace(/([A-Z])/g, ' $1').trim()
+                                            }, void 0, false, {
+                                                fileName: "[project]/packages/web/src/components/FlightCard.tsx",
+                                                lineNumber: 374,
+                                                columnNumber: 21
+                                            }, this),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                className: "text-[11px] text-[var(--color-text-primary)] font-medium",
+                                                children: typeof value === 'number' ? (value * 100).toFixed(0) : value
+                                            }, void 0, false, {
+                                                fileName: "[project]/packages/web/src/components/FlightCard.tsx",
+                                                lineNumber: 375,
+                                                columnNumber: 21
+                                            }, this)
+                                        ]
+                                    }, key, true, {
+                                        fileName: "[project]/packages/web/src/components/FlightCard.tsx",
+                                        lineNumber: 373,
+                                        columnNumber: 19
+                                    }, this);
+                                })
+                            }, void 0, false, {
+                                fileName: "[project]/packages/web/src/components/FlightCard.tsx",
+                                lineNumber: 371,
+                                columnNumber: 15
+                            }, this)
+                        ]
+                    }, void 0, true, {
+                        fileName: "[project]/packages/web/src/components/FlightCard.tsx",
+                        lineNumber: 369,
+                        columnNumber: 13
+                    }, this),
+                    offer.bookingUrl && isValidBookingUrl(offer.bookingUrl) ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
+                        href: offer.bookingUrl,
+                        target: "_blank",
+                        rel: "noopener noreferrer",
+                        className: "block w-full text-center py-3 rounded-xl bg-gradient-to-r from-indigo-500 to-purple-500 hover:from-indigo-400 hover:to-purple-400 text-white text-sm font-semibold transition-all",
+                        children: [
+                            "Book on ",
+                            offer.provider,
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
+                                width: "14",
+                                height: "14",
+                                viewBox: "0 0 24 24",
+                                fill: "none",
+                                stroke: "currentColor",
+                                strokeWidth: "2",
+                                className: "inline ml-1.5 -mt-0.5",
+                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
+                                    d: "M7 17L17 7M17 7H7M17 7v10"
+                                }, void 0, false, {
+                                    fileName: "[project]/packages/web/src/components/FlightCard.tsx",
+                                    lineNumber: 392,
+                                    columnNumber: 17
+                                }, this)
+                            }, void 0, false, {
+                                fileName: "[project]/packages/web/src/components/FlightCard.tsx",
+                                lineNumber: 391,
+                                columnNumber: 15
+                            }, this)
+                        ]
+                    }, void 0, true, {
+                        fileName: "[project]/packages/web/src/components/FlightCard.tsx",
+                        lineNumber: 384,
+                        columnNumber: 13
+                    }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "text-center text-xs text-[var(--color-text-muted)] py-2",
+                        children: "Booking link not available for this flight"
+                    }, void 0, false, {
+                        fileName: "[project]/packages/web/src/components/FlightCard.tsx",
+                        lineNumber: 396,
+                        columnNumber: 13
+                    }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/packages/web/src/components/FlightCard.tsx",
-                lineNumber: 207,
-                columnNumber: 7
-            }, this),
-            cardRecommendation && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "mt-4 pt-3 border-t border-white/[0.04]",
-                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                    className: "flex items-center justify-between text-xs",
-                    children: [
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                            className: "text-[var(--color-success)] flex items-center gap-1.5",
-                            children: [
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                    children: "💳"
-                                }, void 0, false, {
-                                    fileName: "[project]/packages/web/src/components/FlightCard.tsx",
-                                    lineNumber: 222,
-                                    columnNumber: 15
-                                }, this),
-                                cardRecommendation.card.name
-                            ]
-                        }, void 0, true, {
-                            fileName: "[project]/packages/web/src/components/FlightCard.tsx",
-                            lineNumber: 221,
-                            columnNumber: 13
-                        }, this),
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                            className: "text-[var(--color-success)] font-semibold",
-                            children: [
-                                "+$",
-                                cardRecommendation.totalEstimatedValue.toFixed(0),
-                                " value"
-                            ]
-                        }, void 0, true, {
-                            fileName: "[project]/packages/web/src/components/FlightCard.tsx",
-                            lineNumber: 225,
-                            columnNumber: 13
-                        }, this)
-                    ]
-                }, void 0, true, {
-                    fileName: "[project]/packages/web/src/components/FlightCard.tsx",
-                    lineNumber: 220,
-                    columnNumber: 11
-                }, this)
-            }, void 0, false, {
-                fileName: "[project]/packages/web/src/components/FlightCard.tsx",
-                lineNumber: 219,
-                columnNumber: 9
-            }, this),
-            offer.bookingUrl && isValidBookingUrl(offer.bookingUrl) && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "mt-3 pt-3 border-t border-white/[0.04]",
-                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
-                    href: offer.bookingUrl,
-                    target: "_blank",
-                    rel: "noopener noreferrer",
-                    className: "text-xs text-indigo-400 hover:text-indigo-300 transition-colors inline-flex items-center gap-1",
-                    children: [
-                        "Book on ",
-                        offer.provider,
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
-                            width: "12",
-                            height: "12",
-                            viewBox: "0 0 24 24",
-                            fill: "none",
-                            stroke: "currentColor",
-                            strokeWidth: "2",
-                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
-                                d: "M7 17L17 7M17 7H7M17 7v10"
-                            }, void 0, false, {
-                                fileName: "[project]/packages/web/src/components/FlightCard.tsx",
-                                lineNumber: 243,
-                                columnNumber: 15
-                            }, this)
-                        }, void 0, false, {
-                            fileName: "[project]/packages/web/src/components/FlightCard.tsx",
-                            lineNumber: 242,
-                            columnNumber: 13
-                        }, this)
-                    ]
-                }, void 0, true, {
-                    fileName: "[project]/packages/web/src/components/FlightCard.tsx",
-                    lineNumber: 235,
-                    columnNumber: 11
-                }, this)
-            }, void 0, false, {
-                fileName: "[project]/packages/web/src/components/FlightCard.tsx",
-                lineNumber: 234,
+                lineNumber: 312,
                 columnNumber: 9
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/packages/web/src/components/FlightCard.tsx",
-        lineNumber: 161,
+        lineNumber: 228,
         columnNumber: 5
     }, this);
 }
-_c1 = FlightCard;
-var _c, _c1;
+_s(FlightCard, "DuL5jiiQQFgbn7gBKAyxwS/H4Ek=");
+_c2 = FlightCard;
+var _c, _c1, _c2;
 __turbopack_context__.k.register(_c, "ItineraryRow");
-__turbopack_context__.k.register(_c1, "FlightCard");
+__turbopack_context__.k.register(_c1, "SegmentDetail");
+__turbopack_context__.k.register(_c2, "FlightCard");
 if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
     __turbopack_context__.k.registerExports(__turbopack_context__.m, globalThis.$RefreshHelpers$);
 }
