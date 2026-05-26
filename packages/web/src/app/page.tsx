@@ -275,7 +275,7 @@ export default function Home() {
 
       {/* Search Form */}
       <section className={`px-4 transition-all duration-500 ${isIdle ? 'py-2' : 'py-4'}`}>
-        <SearchForm onSearch={handleSearch} loading={view.type === 'loading'} overrides={formOverrides} />
+        <SearchForm onSearch={handleSearch} loading={view.type === 'loading'} overrides={formOverrides} autoSubmit={autoSearch} />
       </section>
 
       {/* Feature Pills — only on idle */}
