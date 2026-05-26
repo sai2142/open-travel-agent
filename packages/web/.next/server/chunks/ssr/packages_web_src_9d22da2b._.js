@@ -792,7 +792,8 @@ function NaturalLanguageBar({ onParsed }) {
             if (data.tripLengthMax) formData.tripLengthMax = data.tripLengthMax;
             onParsed(formData);
             setQuery('');
-        } catch  {
+        } catch (err) {
+            console.error('NL parse error:', err);
             setError('Failed to parse your request');
         } finally{
             setParsing(false);
@@ -818,7 +819,7 @@ function NaturalLanguageBar({ onParsed }) {
                         className: "absolute -inset-0.5 bg-gradient-to-r from-indigo-500/20 via-purple-500/20 to-indigo-500/20 rounded-2xl opacity-0 group-hover:opacity-100 group-focus-within:opacity-100 transition-opacity duration-300 blur-sm"
                     }, void 0, false, {
                         fileName: "[project]/packages/web/src/components/NaturalLanguageBar.tsx",
-                        lineNumber: 80,
+                        lineNumber: 81,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -839,39 +840,39 @@ function NaturalLanguageBar({ onParsed }) {
                                             d: "M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10"
                                         }, void 0, false, {
                                             fileName: "[project]/packages/web/src/components/NaturalLanguageBar.tsx",
-                                            lineNumber: 84,
+                                            lineNumber: 85,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
                                             d: "M12 2a14 14 0 0 1 4 10"
                                         }, void 0, false, {
                                             fileName: "[project]/packages/web/src/components/NaturalLanguageBar.tsx",
-                                            lineNumber: 85,
+                                            lineNumber: 86,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
                                             d: "M2 12h10"
                                         }, void 0, false, {
                                             fileName: "[project]/packages/web/src/components/NaturalLanguageBar.tsx",
-                                            lineNumber: 86,
+                                            lineNumber: 87,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
                                             d: "M19 7l3-3m0 0l-3-3m3 3h-6"
                                         }, void 0, false, {
                                             fileName: "[project]/packages/web/src/components/NaturalLanguageBar.tsx",
-                                            lineNumber: 87,
+                                            lineNumber: 88,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/packages/web/src/components/NaturalLanguageBar.tsx",
-                                    lineNumber: 83,
+                                    lineNumber: 84,
                                     columnNumber: 13
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/packages/web/src/components/NaturalLanguageBar.tsx",
-                                lineNumber: 82,
+                                lineNumber: 83,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -884,7 +885,7 @@ function NaturalLanguageBar({ onParsed }) {
                                 className: "flex-1 bg-transparent px-3 py-4 text-[15px] text-[var(--color-text-primary)] placeholder:text-[var(--color-text-muted)] outline-none"
                             }, void 0, false, {
                                 fileName: "[project]/packages/web/src/components/NaturalLanguageBar.tsx",
-                                lineNumber: 90,
+                                lineNumber: 91,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -899,13 +900,6 @@ function NaturalLanguageBar({ onParsed }) {
                                             className: "dot w-1 h-1 bg-indigo-300 rounded-full"
                                         }, void 0, false, {
                                             fileName: "[project]/packages/web/src/components/NaturalLanguageBar.tsx",
-                                            lineNumber: 107,
-                                            columnNumber: 17
-                                        }, this),
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                            className: "dot w-1 h-1 bg-indigo-300 rounded-full"
-                                        }, void 0, false, {
-                                            fileName: "[project]/packages/web/src/components/NaturalLanguageBar.tsx",
                                             lineNumber: 108,
                                             columnNumber: 17
                                         }, this),
@@ -915,28 +909,35 @@ function NaturalLanguageBar({ onParsed }) {
                                             fileName: "[project]/packages/web/src/components/NaturalLanguageBar.tsx",
                                             lineNumber: 109,
                                             columnNumber: 17
+                                        }, this),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                            className: "dot w-1 h-1 bg-indigo-300 rounded-full"
+                                        }, void 0, false, {
+                                            fileName: "[project]/packages/web/src/components/NaturalLanguageBar.tsx",
+                                            lineNumber: 110,
+                                            columnNumber: 17
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/packages/web/src/components/NaturalLanguageBar.tsx",
-                                    lineNumber: 106,
+                                    lineNumber: 107,
                                     columnNumber: 15
                                 }, this) : 'Parse'
                             }, void 0, false, {
                                 fileName: "[project]/packages/web/src/components/NaturalLanguageBar.tsx",
-                                lineNumber: 99,
+                                lineNumber: 100,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/packages/web/src/components/NaturalLanguageBar.tsx",
-                        lineNumber: 81,
+                        lineNumber: 82,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/packages/web/src/components/NaturalLanguageBar.tsx",
-                lineNumber: 79,
+                lineNumber: 80,
                 columnNumber: 7
             }, this),
             error && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -944,7 +945,7 @@ function NaturalLanguageBar({ onParsed }) {
                 children: error
             }, void 0, false, {
                 fileName: "[project]/packages/web/src/components/NaturalLanguageBar.tsx",
-                lineNumber: 120,
+                lineNumber: 121,
                 columnNumber: 9
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -956,18 +957,18 @@ function NaturalLanguageBar({ onParsed }) {
                         children: ex
                     }, ex, false, {
                         fileName: "[project]/packages/web/src/components/NaturalLanguageBar.tsx",
-                        lineNumber: 126,
+                        lineNumber: 127,
                         columnNumber: 11
                     }, this))
             }, void 0, false, {
                 fileName: "[project]/packages/web/src/components/NaturalLanguageBar.tsx",
-                lineNumber: 124,
+                lineNumber: 125,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/packages/web/src/components/NaturalLanguageBar.tsx",
-        lineNumber: 77,
+        lineNumber: 78,
         columnNumber: 5
     }, this);
 }
@@ -982,6 +983,14 @@ __turbopack_context__.s([
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react-jsx-dev-runtime.js [app-ssr] (ecmascript)");
 'use client';
 ;
+function isValidBookingUrl(url) {
+    try {
+        const parsed = new URL(url);
+        return parsed.protocol === 'http:' || parsed.protocol === 'https:';
+    } catch  {
+        return false;
+    }
+}
 function parseDuration(iso) {
     const match = iso.match(/PT(?:(\d+)H)?(?:(\d+)M)?/);
     if (!match) return iso;
@@ -1023,7 +1032,7 @@ function ItineraryRow({ itinerary, label }) {
                 children: label
             }, void 0, false, {
                 fileName: "[project]/packages/web/src/components/FlightCard.tsx",
-                lineNumber: 88,
+                lineNumber: 97,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1037,7 +1046,7 @@ function ItineraryRow({ itinerary, label }) {
                                 children: formatTime(first.departure.at)
                             }, void 0, false, {
                                 fileName: "[project]/packages/web/src/components/FlightCard.tsx",
-                                lineNumber: 94,
+                                lineNumber: 103,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1045,13 +1054,13 @@ function ItineraryRow({ itinerary, label }) {
                                 children: first.departure.airport
                             }, void 0, false, {
                                 fileName: "[project]/packages/web/src/components/FlightCard.tsx",
-                                lineNumber: 95,
+                                lineNumber: 104,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/packages/web/src/components/FlightCard.tsx",
-                        lineNumber: 93,
+                        lineNumber: 102,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1062,7 +1071,7 @@ function ItineraryRow({ itinerary, label }) {
                                 children: parseDuration(itinerary.duration)
                             }, void 0, false, {
                                 fileName: "[project]/packages/web/src/components/FlightCard.tsx",
-                                lineNumber: 99,
+                                lineNumber: 108,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1072,7 +1081,7 @@ function ItineraryRow({ itinerary, label }) {
                                         className: "flex-1 h-px bg-gradient-to-r from-transparent via-white/10 to-white/10"
                                     }, void 0, false, {
                                         fileName: "[project]/packages/web/src/components/FlightCard.tsx",
-                                        lineNumber: 103,
+                                        lineNumber: 112,
                                         columnNumber: 13
                                     }, this),
                                     itinerary.stops > 0 && itinerary.segments.slice(0, -1).map((seg, i)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1082,7 +1091,7 @@ function ItineraryRow({ itinerary, label }) {
                                                     className: "w-1.5 h-1.5 rounded-full bg-[var(--color-text-muted)]"
                                                 }, void 0, false, {
                                                     fileName: "[project]/packages/web/src/components/FlightCard.tsx",
-                                                    lineNumber: 107,
+                                                    lineNumber: 116,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1090,33 +1099,33 @@ function ItineraryRow({ itinerary, label }) {
                                                     children: seg.arrival.airport
                                                 }, void 0, false, {
                                                     fileName: "[project]/packages/web/src/components/FlightCard.tsx",
-                                                    lineNumber: 108,
+                                                    lineNumber: 117,
                                                     columnNumber: 19
                                                 }, this)
                                             ]
                                         }, i, true, {
                                             fileName: "[project]/packages/web/src/components/FlightCard.tsx",
-                                            lineNumber: 106,
+                                            lineNumber: 115,
                                             columnNumber: 17
                                         }, this)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                         className: "flex-1 h-px bg-gradient-to-r from-white/10 via-white/10 to-transparent"
                                     }, void 0, false, {
                                         fileName: "[project]/packages/web/src/components/FlightCard.tsx",
-                                        lineNumber: 113,
+                                        lineNumber: 122,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                         className: "w-0 h-0 border-t-[3px] border-b-[3px] border-l-[5px] border-transparent border-l-white/20"
                                     }, void 0, false, {
                                         fileName: "[project]/packages/web/src/components/FlightCard.tsx",
-                                        lineNumber: 114,
+                                        lineNumber: 123,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/packages/web/src/components/FlightCard.tsx",
-                                lineNumber: 102,
+                                lineNumber: 111,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1124,13 +1133,13 @@ function ItineraryRow({ itinerary, label }) {
                                 children: stopsLabel(itinerary.stops)
                             }, void 0, false, {
                                 fileName: "[project]/packages/web/src/components/FlightCard.tsx",
-                                lineNumber: 116,
+                                lineNumber: 125,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/packages/web/src/components/FlightCard.tsx",
-                        lineNumber: 98,
+                        lineNumber: 107,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1141,7 +1150,7 @@ function ItineraryRow({ itinerary, label }) {
                                 children: formatTime(last.arrival.at)
                             }, void 0, false, {
                                 fileName: "[project]/packages/web/src/components/FlightCard.tsx",
-                                lineNumber: 122,
+                                lineNumber: 131,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1149,19 +1158,19 @@ function ItineraryRow({ itinerary, label }) {
                                 children: last.arrival.airport
                             }, void 0, false, {
                                 fileName: "[project]/packages/web/src/components/FlightCard.tsx",
-                                lineNumber: 123,
+                                lineNumber: 132,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/packages/web/src/components/FlightCard.tsx",
-                        lineNumber: 121,
+                        lineNumber: 130,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/packages/web/src/components/FlightCard.tsx",
-                lineNumber: 92,
+                lineNumber: 101,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1172,7 +1181,7 @@ function ItineraryRow({ itinerary, label }) {
                         children: first.carrierName || first.carrier
                     }, void 0, false, {
                         fileName: "[project]/packages/web/src/components/FlightCard.tsx",
-                        lineNumber: 128,
+                        lineNumber: 137,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1180,19 +1189,19 @@ function ItineraryRow({ itinerary, label }) {
                         children: first.flightNumber
                     }, void 0, false, {
                         fileName: "[project]/packages/web/src/components/FlightCard.tsx",
-                        lineNumber: 131,
+                        lineNumber: 140,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/packages/web/src/components/FlightCard.tsx",
-                lineNumber: 127,
+                lineNumber: 136,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/packages/web/src/components/FlightCard.tsx",
-        lineNumber: 87,
+        lineNumber: 96,
         columnNumber: 5
     }, this);
 }
@@ -1219,7 +1228,7 @@ function FlightCard({ result, rank, priceLabel }) {
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/packages/web/src/components/FlightCard.tsx",
-                                lineNumber: 148,
+                                lineNumber: 157,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1229,7 +1238,7 @@ function FlightCard({ result, rank, priceLabel }) {
                                         className: "w-1 h-1 rounded-full bg-indigo-400/50"
                                     }, void 0, false, {
                                         fileName: "[project]/packages/web/src/components/FlightCard.tsx",
-                                        lineNumber: 156,
+                                        lineNumber: 165,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1240,13 +1249,13 @@ function FlightCard({ result, rank, priceLabel }) {
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/packages/web/src/components/FlightCard.tsx",
-                                        lineNumber: 157,
+                                        lineNumber: 166,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/packages/web/src/components/FlightCard.tsx",
-                                lineNumber: 155,
+                                lineNumber: 164,
                                 columnNumber: 11
                             }, this),
                             offer.seatsRemaining && offer.seatsRemaining <= 4 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1257,13 +1266,13 @@ function FlightCard({ result, rank, priceLabel }) {
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/packages/web/src/components/FlightCard.tsx",
-                                lineNumber: 162,
+                                lineNumber: 171,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/packages/web/src/components/FlightCard.tsx",
-                        lineNumber: 147,
+                        lineNumber: 156,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1277,7 +1286,7 @@ function FlightCard({ result, rank, priceLabel }) {
                                         children: "$"
                                     }, void 0, false, {
                                         fileName: "[project]/packages/web/src/components/FlightCard.tsx",
-                                        lineNumber: 170,
+                                        lineNumber: 179,
                                         columnNumber: 13
                                     }, this),
                                     offer.price.total.toLocaleString('en-US', {
@@ -1287,7 +1296,7 @@ function FlightCard({ result, rank, priceLabel }) {
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/packages/web/src/components/FlightCard.tsx",
-                                lineNumber: 169,
+                                lineNumber: 178,
                                 columnNumber: 11
                             }, this),
                             priceLabel?.label && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1298,7 +1307,7 @@ function FlightCard({ result, rank, priceLabel }) {
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/packages/web/src/components/FlightCard.tsx",
-                                lineNumber: 174,
+                                lineNumber: 183,
                                 columnNumber: 13
                             }, this),
                             !priceLabel?.label && offer.price.perPassenger && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1310,19 +1319,19 @@ function FlightCard({ result, rank, priceLabel }) {
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/packages/web/src/components/FlightCard.tsx",
-                                lineNumber: 179,
+                                lineNumber: 188,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/packages/web/src/components/FlightCard.tsx",
-                        lineNumber: 168,
+                        lineNumber: 177,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/packages/web/src/components/FlightCard.tsx",
-                lineNumber: 146,
+                lineNumber: 155,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1333,7 +1342,7 @@ function FlightCard({ result, rank, priceLabel }) {
                         label: formatDate(offer.outbound.segments[0].departure.at)
                     }, void 0, false, {
                         fileName: "[project]/packages/web/src/components/FlightCard.tsx",
-                        lineNumber: 188,
+                        lineNumber: 197,
                         columnNumber: 9
                     }, this),
                     offer.inbound && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Fragment"], {
@@ -1342,7 +1351,7 @@ function FlightCard({ result, rank, priceLabel }) {
                                 className: "border-t border-white/[0.04]"
                             }, void 0, false, {
                                 fileName: "[project]/packages/web/src/components/FlightCard.tsx",
-                                lineNumber: 191,
+                                lineNumber: 200,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(ItineraryRow, {
@@ -1350,7 +1359,7 @@ function FlightCard({ result, rank, priceLabel }) {
                                 label: formatDate(offer.inbound.segments[0].departure.at)
                             }, void 0, false, {
                                 fileName: "[project]/packages/web/src/components/FlightCard.tsx",
-                                lineNumber: 192,
+                                lineNumber: 201,
                                 columnNumber: 13
                             }, this)
                         ]
@@ -1358,7 +1367,7 @@ function FlightCard({ result, rank, priceLabel }) {
                 ]
             }, void 0, true, {
                 fileName: "[project]/packages/web/src/components/FlightCard.tsx",
-                lineNumber: 187,
+                lineNumber: 196,
                 columnNumber: 7
             }, this),
             cardRecommendation && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1373,14 +1382,14 @@ function FlightCard({ result, rank, priceLabel }) {
                                     children: "💳"
                                 }, void 0, false, {
                                     fileName: "[project]/packages/web/src/components/FlightCard.tsx",
-                                    lineNumber: 202,
+                                    lineNumber: 211,
                                     columnNumber: 15
                                 }, this),
                                 cardRecommendation.card.name
                             ]
                         }, void 0, true, {
                             fileName: "[project]/packages/web/src/components/FlightCard.tsx",
-                            lineNumber: 201,
+                            lineNumber: 210,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1392,21 +1401,21 @@ function FlightCard({ result, rank, priceLabel }) {
                             ]
                         }, void 0, true, {
                             fileName: "[project]/packages/web/src/components/FlightCard.tsx",
-                            lineNumber: 205,
+                            lineNumber: 214,
                             columnNumber: 13
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/packages/web/src/components/FlightCard.tsx",
-                    lineNumber: 200,
+                    lineNumber: 209,
                     columnNumber: 11
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/packages/web/src/components/FlightCard.tsx",
-                lineNumber: 199,
+                lineNumber: 208,
                 columnNumber: 9
             }, this),
-            offer.bookingUrl && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+            offer.bookingUrl && isValidBookingUrl(offer.bookingUrl) && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "mt-3 pt-3 border-t border-white/[0.04]",
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
                     href: offer.bookingUrl,
@@ -1427,29 +1436,29 @@ function FlightCard({ result, rank, priceLabel }) {
                                 d: "M7 17L17 7M17 7H7M17 7v10"
                             }, void 0, false, {
                                 fileName: "[project]/packages/web/src/components/FlightCard.tsx",
-                                lineNumber: 223,
+                                lineNumber: 232,
                                 columnNumber: 15
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/packages/web/src/components/FlightCard.tsx",
-                            lineNumber: 222,
+                            lineNumber: 231,
                             columnNumber: 13
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/packages/web/src/components/FlightCard.tsx",
-                    lineNumber: 215,
+                    lineNumber: 224,
                     columnNumber: 11
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/packages/web/src/components/FlightCard.tsx",
-                lineNumber: 214,
+                lineNumber: 223,
                 columnNumber: 9
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/packages/web/src/components/FlightCard.tsx",
-        lineNumber: 141,
+        lineNumber: 150,
         columnNumber: 5
     }, this);
 }
@@ -2109,29 +2118,70 @@ function ResultFilters({ results, filters, onChange, resultCount }) {
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
                                         className: "block text-[10px] text-[var(--color-text-muted)] uppercase tracking-widest mb-2",
-                                        children: [
-                                            "Max Price ",
-                                            filters.maxPrice !== null && `($${filters.maxPrice})`
-                                        ]
-                                    }, void 0, true, {
+                                        children: "Max Price"
+                                    }, void 0, false, {
                                         fileName: "[project]/packages/web/src/components/ResultFilters.tsx",
                                         lineNumber: 227,
                                         columnNumber: 15
                                     }, this),
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
-                                        type: "range",
-                                        min: priceRange.min,
-                                        max: priceRange.max,
-                                        step: 10,
-                                        value: filters.maxPrice ?? priceRange.max,
-                                        onChange: (e)=>{
-                                            const val = Number(e.target.value);
-                                            update({
-                                                maxPrice: val >= priceRange.max ? null : val
-                                            });
-                                        },
-                                        className: "w-full accent-indigo-500"
-                                    }, void 0, false, {
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        className: "flex items-center gap-2",
+                                        children: [
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
+                                                type: "range",
+                                                min: priceRange.min,
+                                                max: priceRange.max,
+                                                step: 10,
+                                                value: filters.maxPrice ?? priceRange.max,
+                                                onChange: (e)=>{
+                                                    const val = Number(e.target.value);
+                                                    update({
+                                                        maxPrice: val >= priceRange.max ? null : val
+                                                    });
+                                                },
+                                                className: "flex-1 accent-indigo-500"
+                                            }, void 0, false, {
+                                                fileName: "[project]/packages/web/src/components/ResultFilters.tsx",
+                                                lineNumber: 231,
+                                                columnNumber: 17
+                                            }, this),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                className: "relative w-20 shrink-0",
+                                                children: [
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                        className: "absolute left-2 top-1/2 -translate-y-1/2 text-[11px] text-[var(--color-text-muted)]",
+                                                        children: "$"
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/packages/web/src/components/ResultFilters.tsx",
+                                                        lineNumber: 244,
+                                                        columnNumber: 19
+                                                    }, this),
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
+                                                        type: "number",
+                                                        min: 0,
+                                                        max: 100000,
+                                                        placeholder: "Any",
+                                                        value: filters.maxPrice ?? '',
+                                                        onChange: (e)=>{
+                                                            const val = e.target.value ? Number(e.target.value) : null;
+                                                            update({
+                                                                maxPrice: val
+                                                            });
+                                                        },
+                                                        className: "input-field text-xs pl-5 py-1.5 !rounded-lg"
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/packages/web/src/components/ResultFilters.tsx",
+                                                        lineNumber: 245,
+                                                        columnNumber: 19
+                                                    }, this)
+                                                ]
+                                            }, void 0, true, {
+                                                fileName: "[project]/packages/web/src/components/ResultFilters.tsx",
+                                                lineNumber: 243,
+                                                columnNumber: 17
+                                            }, this)
+                                        ]
+                                    }, void 0, true, {
                                         fileName: "[project]/packages/web/src/components/ResultFilters.tsx",
                                         lineNumber: 230,
                                         columnNumber: 15
@@ -2146,95 +2196,153 @@ function ResultFilters({ results, filters, onChange, resultCount }) {
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
                                         className: "block text-[10px] text-[var(--color-text-muted)] uppercase tracking-widest mb-2",
+                                        children: "Max Duration"
+                                    }, void 0, false, {
+                                        fileName: "[project]/packages/web/src/components/ResultFilters.tsx",
+                                        lineNumber: 263,
+                                        columnNumber: 15
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        className: "flex items-center gap-2",
                                         children: [
-                                            "Max Duration ",
-                                            filters.maxDuration !== null && `(${filters.maxDuration}h)`
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
+                                                type: "range",
+                                                min: 2,
+                                                max: 24,
+                                                step: 1,
+                                                value: filters.maxDuration ?? 24,
+                                                onChange: (e)=>{
+                                                    const val = Number(e.target.value);
+                                                    update({
+                                                        maxDuration: val >= 24 ? null : val
+                                                    });
+                                                },
+                                                className: "flex-1 accent-indigo-500"
+                                            }, void 0, false, {
+                                                fileName: "[project]/packages/web/src/components/ResultFilters.tsx",
+                                                lineNumber: 267,
+                                                columnNumber: 17
+                                            }, this),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                className: "relative w-20 shrink-0",
+                                                children: [
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
+                                                        type: "number",
+                                                        min: 1,
+                                                        max: 24,
+                                                        placeholder: "Any",
+                                                        value: filters.maxDuration ?? '',
+                                                        onChange: (e)=>{
+                                                            const val = e.target.value ? Number(e.target.value) : null;
+                                                            update({
+                                                                maxDuration: val
+                                                            });
+                                                        },
+                                                        className: "input-field text-xs py-1.5 !rounded-lg"
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/packages/web/src/components/ResultFilters.tsx",
+                                                        lineNumber: 280,
+                                                        columnNumber: 19
+                                                    }, this),
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                        className: "absolute right-2 top-1/2 -translate-y-1/2 text-[11px] text-[var(--color-text-muted)]",
+                                                        children: "hr"
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/packages/web/src/components/ResultFilters.tsx",
+                                                        lineNumber: 292,
+                                                        columnNumber: 19
+                                                    }, this)
+                                                ]
+                                            }, void 0, true, {
+                                                fileName: "[project]/packages/web/src/components/ResultFilters.tsx",
+                                                lineNumber: 279,
+                                                columnNumber: 17
+                                            }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/packages/web/src/components/ResultFilters.tsx",
-                                        lineNumber: 246,
-                                        columnNumber: 15
-                                    }, this),
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
-                                        type: "range",
-                                        min: 2,
-                                        max: 24,
-                                        step: 1,
-                                        value: filters.maxDuration ?? 24,
-                                        onChange: (e)=>{
-                                            const val = Number(e.target.value);
-                                            update({
-                                                maxDuration: val >= 24 ? null : val
-                                            });
-                                        },
-                                        className: "w-full accent-indigo-500"
-                                    }, void 0, false, {
-                                        fileName: "[project]/packages/web/src/components/ResultFilters.tsx",
-                                        lineNumber: 249,
+                                        lineNumber: 266,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/packages/web/src/components/ResultFilters.tsx",
-                                lineNumber: 245,
+                                lineNumber: 262,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
                                         className: "block text-[10px] text-[var(--color-text-muted)] uppercase tracking-widest mb-2",
-                                        children: [
-                                            "Depart ",
-                                            formatHour(filters.departTimeMin),
-                                            "–",
-                                            formatHour(filters.departTimeMax)
-                                        ]
-                                    }, void 0, true, {
+                                        children: "Departure Window"
+                                    }, void 0, false, {
                                         fileName: "[project]/packages/web/src/components/ResultFilters.tsx",
-                                        lineNumber: 265,
+                                        lineNumber: 299,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        className: "flex gap-1 items-center",
+                                        className: "flex items-center gap-2",
                                         children: [
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
-                                                type: "range",
-                                                min: 0,
-                                                max: 23,
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("select", {
                                                 value: filters.departTimeMin,
                                                 onChange: (e)=>update({
                                                         departTimeMin: Number(e.target.value)
                                                     }),
-                                                className: "w-full accent-indigo-500"
+                                                className: "input-field text-xs py-1.5 !rounded-lg flex-1",
+                                                children: Array.from({
+                                                    length: 24
+                                                }, (_, i)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
+                                                        value: i,
+                                                        children: formatHour(i)
+                                                    }, i, false, {
+                                                        fileName: "[project]/packages/web/src/components/ResultFilters.tsx",
+                                                        lineNumber: 309,
+                                                        columnNumber: 21
+                                                    }, this))
                                             }, void 0, false, {
                                                 fileName: "[project]/packages/web/src/components/ResultFilters.tsx",
-                                                lineNumber: 269,
+                                                lineNumber: 303,
                                                 columnNumber: 17
                                             }, this),
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
-                                                type: "range",
-                                                min: 0,
-                                                max: 23,
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                className: "text-[10px] text-[var(--color-text-muted)]",
+                                                children: "to"
+                                            }, void 0, false, {
+                                                fileName: "[project]/packages/web/src/components/ResultFilters.tsx",
+                                                lineNumber: 312,
+                                                columnNumber: 17
+                                            }, this),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("select", {
                                                 value: filters.departTimeMax,
                                                 onChange: (e)=>update({
                                                         departTimeMax: Number(e.target.value)
                                                     }),
-                                                className: "w-full accent-indigo-500"
+                                                className: "input-field text-xs py-1.5 !rounded-lg flex-1",
+                                                children: Array.from({
+                                                    length: 24
+                                                }, (_, i)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
+                                                        value: i,
+                                                        children: formatHour(i)
+                                                    }, i, false, {
+                                                        fileName: "[project]/packages/web/src/components/ResultFilters.tsx",
+                                                        lineNumber: 319,
+                                                        columnNumber: 21
+                                                    }, this))
                                             }, void 0, false, {
                                                 fileName: "[project]/packages/web/src/components/ResultFilters.tsx",
-                                                lineNumber: 277,
+                                                lineNumber: 313,
                                                 columnNumber: 17
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/packages/web/src/components/ResultFilters.tsx",
-                                        lineNumber: 268,
+                                        lineNumber: 302,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/packages/web/src/components/ResultFilters.tsx",
-                                lineNumber: 264,
+                                lineNumber: 298,
                                 columnNumber: 13
                             }, this)
                         ]
@@ -2250,7 +2358,7 @@ function ResultFilters({ results, filters, onChange, resultCount }) {
                                 children: "Airlines"
                             }, void 0, false, {
                                 fileName: "[project]/packages/web/src/components/ResultFilters.tsx",
-                                lineNumber: 292,
+                                lineNumber: 329,
                                 columnNumber: 15
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2273,19 +2381,19 @@ function ResultFilters({ results, filters, onChange, resultCount }) {
                                         children: name
                                     }, code, false, {
                                         fileName: "[project]/packages/web/src/components/ResultFilters.tsx",
-                                        lineNumber: 299,
+                                        lineNumber: 336,
                                         columnNumber: 21
                                     }, this);
                                 })
                             }, void 0, false, {
                                 fileName: "[project]/packages/web/src/components/ResultFilters.tsx",
-                                lineNumber: 295,
+                                lineNumber: 332,
                                 columnNumber: 15
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/packages/web/src/components/ResultFilters.tsx",
-                        lineNumber: 291,
+                        lineNumber: 328,
                         columnNumber: 13
                     }, this),
                     activeFilterCount > 0 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -2294,7 +2402,7 @@ function ResultFilters({ results, filters, onChange, resultCount }) {
                         children: "Reset all filters"
                     }, void 0, false, {
                         fileName: "[project]/packages/web/src/components/ResultFilters.tsx",
-                        lineNumber: 326,
+                        lineNumber: 363,
                         columnNumber: 13
                     }, this)
                 ]

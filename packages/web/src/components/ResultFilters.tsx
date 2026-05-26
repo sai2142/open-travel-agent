@@ -225,63 +225,100 @@ export default function ResultFilters({ results, filters, onChange, resultCount 
             {/* Max Price */}
             <div>
               <label className="block text-[10px] text-[var(--color-text-muted)] uppercase tracking-widest mb-2">
-                Max Price {filters.maxPrice !== null && `($${filters.maxPrice})`}
+                Max Price
               </label>
-              <input
-                type="range"
-                min={priceRange.min}
-                max={priceRange.max}
-                step={10}
-                value={filters.maxPrice ?? priceRange.max}
-                onChange={(e) => {
-                  const val = Number(e.target.value);
-                  update({ maxPrice: val >= priceRange.max ? null : val });
-                }}
-                className="w-full accent-indigo-500"
-              />
+              <div className="flex items-center gap-2">
+                <input
+                  type="range"
+                  min={priceRange.min}
+                  max={priceRange.max}
+                  step={10}
+                  value={filters.maxPrice ?? priceRange.max}
+                  onChange={(e) => {
+                    const val = Number(e.target.value);
+                    update({ maxPrice: val >= priceRange.max ? null : val });
+                  }}
+                  className="flex-1 accent-indigo-500"
+                />
+                <div className="relative w-20 shrink-0">
+                  <span className="absolute left-2 top-1/2 -translate-y-1/2 text-[11px] text-[var(--color-text-muted)]">$</span>
+                  <input
+                    type="number"
+                    min={0}
+                    max={100000}
+                    placeholder="Any"
+                    value={filters.maxPrice ?? ''}
+                    onChange={(e) => {
+                      const val = e.target.value ? Number(e.target.value) : null;
+                      update({ maxPrice: val });
+                    }}
+                    className="input-field text-xs pl-5 py-1.5 !rounded-lg"
+                  />
+                </div>
+              </div>
             </div>
 
             {/* Max Duration */}
             <div>
               <label className="block text-[10px] text-[var(--color-text-muted)] uppercase tracking-widest mb-2">
-                Max Duration {filters.maxDuration !== null && `(${filters.maxDuration}h)`}
+                Max Duration
               </label>
-              <input
-                type="range"
-                min={2}
-                max={24}
-                step={1}
-                value={filters.maxDuration ?? 24}
-                onChange={(e) => {
-                  const val = Number(e.target.value);
-                  update({ maxDuration: val >= 24 ? null : val });
-                }}
-                className="w-full accent-indigo-500"
-              />
+              <div className="flex items-center gap-2">
+                <input
+                  type="range"
+                  min={2}
+                  max={24}
+                  step={1}
+                  value={filters.maxDuration ?? 24}
+                  onChange={(e) => {
+                    const val = Number(e.target.value);
+                    update({ maxDuration: val >= 24 ? null : val });
+                  }}
+                  className="flex-1 accent-indigo-500"
+                />
+                <div className="relative w-20 shrink-0">
+                  <input
+                    type="number"
+                    min={1}
+                    max={24}
+                    placeholder="Any"
+                    value={filters.maxDuration ?? ''}
+                    onChange={(e) => {
+                      const val = e.target.value ? Number(e.target.value) : null;
+                      update({ maxDuration: val });
+                    }}
+                    className="input-field text-xs py-1.5 !rounded-lg"
+                  />
+                  <span className="absolute right-2 top-1/2 -translate-y-1/2 text-[11px] text-[var(--color-text-muted)]">hr</span>
+                </div>
+              </div>
             </div>
 
             {/* Departure Time */}
             <div>
               <label className="block text-[10px] text-[var(--color-text-muted)] uppercase tracking-widest mb-2">
-                Depart {formatHour(filters.departTimeMin)}–{formatHour(filters.departTimeMax)}
+                Departure Window
               </label>
-              <div className="flex gap-1 items-center">
-                <input
-                  type="range"
-                  min={0}
-                  max={23}
+              <div className="flex items-center gap-2">
+                <select
                   value={filters.departTimeMin}
                   onChange={(e) => update({ departTimeMin: Number(e.target.value) })}
-                  className="w-full accent-indigo-500"
-                />
-                <input
-                  type="range"
-                  min={0}
-                  max={23}
+                  className="input-field text-xs py-1.5 !rounded-lg flex-1"
+                >
+                  {Array.from({ length: 24 }, (_, i) => (
+                    <option key={i} value={i}>{formatHour(i)}</option>
+                  ))}
+                </select>
+                <span className="text-[10px] text-[var(--color-text-muted)]">to</span>
+                <select
                   value={filters.departTimeMax}
                   onChange={(e) => update({ departTimeMax: Number(e.target.value) })}
-                  className="w-full accent-indigo-500"
-                />
+                  className="input-field text-xs py-1.5 !rounded-lg flex-1"
+                >
+                  {Array.from({ length: 24 }, (_, i) => (
+                    <option key={i} value={i}>{formatHour(i)}</option>
+                  ))}
+                </select>
               </div>
             </div>
           </div>
