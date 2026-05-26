@@ -102,11 +102,13 @@ export default function Home() {
   const [filters, setFilters] = useState<FilterState>(getDefaultFilters);
   const [lastSearchForm, setLastSearchForm] = useState<SearchFormData | null>(null);
   const [shareToast, setShareToast] = useState(false);
+  const [autoSearch, setAutoSearch] = useState(false);
 
   useEffect(() => {
     const urlOverrides = decodeUrlToOverrides();
-    if (urlOverrides) {
+    if (urlOverrides && urlOverrides.origin && urlOverrides.destination) {
       setFormOverrides(urlOverrides);
+      setAutoSearch(true);
     }
   }, []);
 
