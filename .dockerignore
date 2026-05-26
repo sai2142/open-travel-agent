@@ -1,8 +1,15 @@
 node_modules
 dist
 .env
+.env.local
 *.db
 *.sqlite
 vault.enc
 vault.enc.salt
 .git
+.github
+.vscode
+coverage
+*.log
+.travel-agent
+docs
