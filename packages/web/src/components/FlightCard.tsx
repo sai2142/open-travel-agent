@@ -170,7 +170,12 @@ export default function FlightCard({ result, rank, priceLabel }: Props) {
             <span className="text-[var(--color-text-muted)] text-sm font-normal">$</span>
             {offer.price.total.toLocaleString('en-US', { minimumFractionDigits: 0, maximumFractionDigits: 0 })}
           </div>
-          {offer.price.perPassenger && (
+          {priceLabel?.label && (
+            <div className={`text-[10px] font-semibold ${priceLabel.color}`}>
+              {priceLabel.label} price
+            </div>
+          )}
+          {!priceLabel?.label && offer.price.perPassenger && (
             <div className="text-[10px] text-[var(--color-text-muted)]">
               ${offer.price.perPassenger}/person
             </div>
