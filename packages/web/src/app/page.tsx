@@ -39,6 +39,14 @@ interface FlexResults {
 
 export default function Home() {
   const [view, setView] = useState<ViewState>({ type: 'idle' });
+  const [formOverrides, setFormOverrides] = useState<Partial<SearchFormData> | null>(null);
+  const [nlApplied, setNlApplied] = useState(false);
+
+  const handleNlParsed = (data: Partial<SearchFormData>) => {
+    setFormOverrides(data);
+    setNlApplied(true);
+    setTimeout(() => setNlApplied(false), 2000);
+  };
 
   const handleSearch = async (form: SearchFormData) => {
     setView({ type: 'loading', mode: form.mode });
