@@ -9,10 +9,11 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@open-travel-agent/shared-types": "*",
+    "@anthropic-ai/sdk": "^0.98.0",
     "@open-travel-agent/agent-core": "*",
-    "@open-travel-agent/provider-mock": "*",
     "@open-travel-agent/provider-duffel": "*",
+    "@open-travel-agent/provider-mock": "*",
+    "@open-travel-agent/shared-types": "*",
     "next": "^15.3.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
