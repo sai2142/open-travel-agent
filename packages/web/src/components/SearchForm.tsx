@@ -2,7 +2,13 @@
 
 import { useState, useEffect } from 'react';
 
-export type SearchMode = 'exact' | 'date-flex' | 'weekend' | 'trip-length';
+export type SearchMode = 'exact' | 'date-flex' | 'weekend' | 'trip-length' | 'multi-city';
+
+export interface MultiCityLeg {
+  origin: string;
+  destination: string;
+  date: string;
+}
 
 export interface SearchFormData {
   origin: string;
@@ -17,6 +23,7 @@ export interface SearchFormData {
   weekendMonth: string;
   tripLengthMin: number;
   tripLengthMax: number;
+  multiCityLegs: MultiCityLeg[];
 }
 
 interface Props {
