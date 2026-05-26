@@ -56,6 +56,22 @@ export const SAMPLE_CARDS: CreditCard[] = [
     ],
   },
   {
+    id: 'capital-one-venture',
+    name: 'Capital One Venture',
+    issuer: 'Capital One',
+    network: 'Visa',
+    annualFee: 95,
+    categories: [
+      { category: 'travel', multiplier: 5, description: '5x on hotels and car rentals via Capital One Travel' },
+      { category: 'airlines', multiplier: 5, description: '5x on flights via Capital One Travel' },
+      { category: 'general', multiplier: 2 },
+    ],
+    perks: [
+      { type: 'global_entry_credit', description: 'Global Entry/TSA PreCheck credit', value: 20 },
+      { type: 'no_foreign_transaction_fee', description: 'No foreign transaction fees' },
+    ],
+  },
+  {
     id: 'capital-one-venture-x',
     name: 'Capital One Venture X',
     issuer: 'Capital One',
