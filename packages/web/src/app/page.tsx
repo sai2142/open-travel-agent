@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useMemo, useEffect, useCallback } from 'react';
-import SearchForm, { type SearchFormData } from '@/components/SearchForm';
+import SearchForm, { type SearchFormData, type MultiCityLeg } from '@/components/SearchForm';
 import NaturalLanguageBar from '@/components/NaturalLanguageBar';
 import FlightCard from '@/components/FlightCard';
 import DateGrid from '@/components/DateGrid';
