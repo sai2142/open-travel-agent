@@ -73,7 +73,9 @@ function defaultLegs(): MultiCityLeg[] {
   ];
 }
 
-export default function SearchForm({ onSearch, loading, overrides }: Props) {
+export default function SearchForm({ onSearch, loading, overrides, autoSubmit }: Props) {
+  const autoSubmitted = useState(false)[1];
+  const autoSubmitRef = { current: false };
   const [form, setForm] = useState<SearchFormData>({
     origin: '',
     destination: '',
